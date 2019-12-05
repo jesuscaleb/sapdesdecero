@@ -1,0 +1,37 @@
+@import "bootstrap/bootstrap";
+/* Colors*/
+$bg-blue: #0b31a1;
+$ft-white: #FFFFFF;
+html,
+body {
+  height: 100%;
+}
+
+#page-content {
+  flex: 1 0 auto;
+  margin-top: 5%;
+}
+
+#sticky-footer {
+  flex-shrink: 0;
+}
+
+#nav-item{
+    padding-left:25px;
+    padding-right:25px;
+    color: $ft-white;
+}
+
+#nav-container{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.navbar-custom {
+    background-color: $bg-blue;
+}
+
+.body-margin{
+    margin-top: 4%;
+}
+
