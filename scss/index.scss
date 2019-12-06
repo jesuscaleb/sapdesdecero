@@ -1,10 +1,30 @@
 @import "bootstrap/bootstrap";
+@import "fonts";
+
 /* Colors*/
-$bg-blue: #0b31a1;
-$ft-white: #FFFFFF;
+$hd-blue: rgb(72,81,158);
+$hd-red: rgb(233,74,72);
+$crsl-yellow: rgb(255,255,0);
+$rgba-blue: rgba(48, 61, 136, 0.7);
+$rgba-green: rgba(0, 102, 51, 0.7);
+$rgba-lgtblue:rgba(44, 151, 199,0.7);
+$hd-white: #FFFFFF;
+
+
+/* Images */
+$bkimg1: '../img/SAPBUSINESSONE.png';
+$bkimg2: '../img/SAPFINANZAS.png';
+$bkimg3: '../img/SAPGESTIONDEMATERIALES.png';
+
+/* Main CSS */
 html,
 body {
   height: 100%;
+}
+
+/* Body content */
+.body-margin{
+  margin-top: 4%;
 }
 
 #page-content {
@@ -12,26 +32,133 @@ body {
   margin-top: 5%;
 }
 
+/* Navbar */
+#nav-item{
+    padding-left:30px;
+    padding-right:30px;
+    color: $hd-white;
+    font-family: Lato;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    span:hover{
+      border-bottom: 4px solid;
+      border-color: $hd-red;
+    }
+}
+
+.navbar-custom {
+    background-color: $hd-blue;
+}
+
+/* Footer */
 #sticky-footer {
   flex-shrink: 0;
 }
 
-#nav-item{
-    padding-left:25px;
-    padding-right:25px;
-    color: $ft-white;
+/* Custom image size */
+img{
+  width: 100%;
+  height: 100%;
 }
 
-#nav-container{
-    margin-top: 2%;
-    margin-bottom: 2%;
+.logo{
+  max-width: 50%;
+  max-height: auto;
+}
+/* Background images for Carrousel*/
+
+.bkimg1{
+  background-image: url($bkimg1);
 }
 
-.navbar-custom {
-    background-color: $bg-blue;
+.bkimg2{
+  background-image: url($bkimg2);
 }
 
-.body-margin{
-    margin-top: 4%;
+.bkimg3{
+  background-image: url($bkimg3);
 }
 
+.bkimg-det{
+  background-size:     cover;                   
+  background-repeat:   no-repeat;
+  background-position: center center;    
+  height: 440px;
+  width: 1580px;
+  max-height: 440px;
+  max-width: 1580px;
+}
+
+.bklayer{
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.bklyr-color1{
+  background-color: $rgba-blue;
+}
+
+.bklyr-color2{
+  background-color: $rgba-green;
+}
+
+.bklyr-color3{
+  background-color: $rgba-lgtblue;
+}
+
+/* Carrousel Content */
+
+.bkimg-det {
+  h2{
+    color: white;
+    font-family: Gothan;
+    font-weight: bold;
+  }
+
+  h4{
+    color: $crsl-yellow;
+    font-family: Gothan;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .sub{
+    color: $hd-white;
+    font-family: Gothan;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .desc{
+    color: $hd-white;
+    font-family: Gothan Book;
+    span{
+      padding-bottom: 4px;
+      border-bottom: 2px solid;
+      border-color: $hd-red;
+    }
+  }
+
+  .btn-entrar{
+    text-align: center;
+    font-family: Gothan Book;
+    color: $hd-white;
+    a {
+      border: 2px solid;
+      border-color: $hd-red;
+      text-decoration: none;
+      cursor: pointer;
+      padding-left: 6px;
+      padding-right: 6px;
+      padding-top:2px;
+      padding-bottom:2px;
+    }
+  }
+
+
+
+  
+}

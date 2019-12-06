@@ -1,0 +1,75 @@
+/* Fonts */
+
+/* Gothan Bold*/
+@font-face {
+    font-family: Gothan;
+    font-weight: bold;
+    src: url("../fonts/GothamBold.otf") format("opentype");
+}
+
+/* Gothan Bold Italic*/
+@font-face {
+    font-family: Gothan;
+    font-weight: bold;
+    font-style: italic;
+    src: url("../fonts/GothamBoldItalic.ttf") format("opentype");
+}
+
+/* Gothan Black*/
+@font-face {
+    font-family: Gothan Black;
+    src: url("../fonts/Gotham-Black.otf") format("opentype");
+}
+
+/* Gothan Book*/
+@font-face {
+    font-family: Gothan Book;
+    src: url("../fonts/GothamBook.ttf") format("opentype");
+}
+
+/* Gothan Book Italic*/
+@font-face {
+    font-family: Gothan Book;
+    font-style: italic;
+    src: url("../fonts/GothamBookItalic.ttf") format("opentype");
+}
+
+/* Gothan Light*/
+@font-face {
+    font-family: Gothan Light;
+    src: url("../fonts/GothamLight.ttf") format("opentype");
+}
+
+/* Gothan Light Italic*/
+@font-face {
+    font-family: Gothan Light;
+    font-style: italic;
+    src: url("../fonts/GothamLightItalic.ttf") format("opentype");
+}
+
+/* Gothan Medium Italic */
+@font-face {
+    font-family: Gothan Medium;
+    font-style: italic;
+    src: url("../fonts/GothamMediumItalic.ttf") format("opentype");
+}
+
+/* Gothan Thin */
+@font-face {
+    font-family: Gothan Thin;
+    src: url("../fonts/Gotham-Thin.otf") format("opentype");
+}
+
+/* Gothan Thin Italic */
+@font-face {
+    font-family: Gothan Thin;
+    font-style: italic;
+    src: url("../fonts/Gotham-ThinItalic.otf") format("opentype");
+}
+
+/* Gothan Ultra Italic */
+@font-face {
+    font-family: Gothan Ultra;
+    font-style: italic;
+    src: url("../fonts/Gotham-UltraItalic.otf") format("opentype");
+}
