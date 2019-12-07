@@ -9,7 +9,7 @@
 </head>
 <body class="d-flex flex-column">
     <!-- Header -->
-    <section id="ITSYSTEMS-ENCABEZADO">
+    <section id="ITSYSTEMS-ENCABEZADO" >
         
         <nav class="navbar fixed-top navbar-custom">
             <div class="container">
@@ -32,118 +32,51 @@
         
         <div id="page-content">
     
-        <!-- Carousel-->
-
-        <div id="ITSYSTEMS-CAROUSEL" class="carousel slide" data-ride='carousel'>
-                <ul class="carousel-indicators">
-                    <li data-target="#ITSYSTEMS-CAROUSEL" data-slide-to="0" class="active"></li>
-                    <li data-target="#ITSYSTEMS-CAROUSEL" data-slide-to="1"></li>
-                    <li data-target="#ITSYSTEMS-CAROUSEL" data-slide-to="2"></li>
-                    <li data-target="#ITSYSTEMS-CAROUSEL" data-slide-to="3"></li>
-                </ul>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <!--<img class="d-block w-100" src="img/SAPBUSINESSONE.png" alt="Second slide">-->
-                    <div class="bkimg1 bkimg-det d-block w-100">
-                        <div class="bklayer bklyr-color1">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col col-md-5 mt-md-7">
-                                        <h2>Capacítate en lo que las empresas necesitan</h2>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col col-md-3 mt-md-5">
-                                        <h4>SAP B1</h4>
-                                        <p class="sub">Administración con SAP Business One</p>
-                                        <p class="btn-entrar"><a>Entrar</a></p>
-                                    </div>
-                                    <div class="col col-md-3 mt-md-5">
-                                        <h4>SAP MM</h4>
-                                        <p class="sub">Gestión Logística y Almacén</p></br>
-                                        <p class="btn-entrar"><a>Entrar</a></p>
-                                    </div>
-                                    <div class="col col-md-3 mt-md-5">
-                                        <h4>SAP FI</h4>
-                                        <p class="sub">Gestión Contabilidad y Finanzas</p>
-                                        <p class="btn-entrar"><a>Entrar</a></p>
-                                    </div>
-                                </div>
+        <!-- Body Header (Background Image)-->
+        <div class="bkimg1 bkimg-det d-block w-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-md-4 offset-md-8">
+                        <div class="frm-container container">
+                            <div class="frm-title">
+                                <h4>REGISTRATE AHORA</h4>
+                                <p>Recibe información al instante sobre el curso de tu interés.</p>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="bkimg1 bkimg-det d-block w-100">
-                        <div class="bklayer bklyr-color1">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col col-md-5 mt-md-7">
-                                        <h2>ADMINISTRACIÓN CON SAP BUSINESS ONE</h2>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col col-md-2 mt-md-4">
-                                        <p>
-                                            <img src="img/logos/sapb1.png" alt="">
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col col-md-8 mt-md-4">
-                                        <p class="desc"><span>Gestiona los procesos fundamentales de cualquier empresa.</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="bkimg2 bkimg-det d-block w-100">
-                        <div class="bklayer bklyr-color2">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col col-md-5 mt-md-7">
-                                        <h2>GESTIÓN LÓGISTICA Y ALMACÉN</h2>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col col-md-2 mt-md-4">
-                                        <p>
-                                            <img src="img/logos/sapmm.png" alt="">
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col col-md-8 mt-md-4">
-                                        <p class="desc"><span>Inicia el aprendizaje logístico de las grandes empresas en la cadena de suministro.</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="bkimg3 bkimg-det d-block w-100">
-                        <div class="bklayer bklyr-color3">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col col-md-5 mt-md-7">
-                                        <h2>GESTIÓN CONTABILIDAD Y FINANZAS</h2>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col col-md-2 mt-md-4">
-                                        <p>
-                                            <img src="img/logos/sapfi.png" alt="">
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col col-md-8 mt-md-4">
-                                        <p class="desc"><span>Gestiona reportes financieros en tiempo real con nuestra metodología ágil desde cero.</span></p>
-                                    </div>
-                                </div>
+                            <div class="frm-body">
+                                <!-- TODO: Realizar un boton en posicion fixed en miniatura para saltar al formulario-->
+                                <form name="reg-form" id="reg-form">
+                                        <div class="form-group">
+                                            <input class="form-control form-control-sm" name="txtnom" type="text" placeholder="Nombres completos">
+                                            
+                                        </div>
+                                        <div class="form-group">
+                                            <input class="form-control form-control-sm" name="txtemail" type="text" placeholder="Correo electronico">
+                                        </div>
+                                        <div class="form-group">
+                                            <input class="form-control form-control-sm" name="txtcel" type="text" placeholder="Numero de celular">
+                                        </div>
+                                        <div class="form-group">
+                                            <select name="selcur" class="form-control form-control-sm">
+                                                    <option value="default">Selecciona un curso </option>
+                                                    <option value="1">Curso 1 </option>
+                                                    <option value="2">Curso 2 </option>
+                                                    <option value="3">Curso 3 </option>
+                                                    <option value="4">Curso 4 </option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="custom-control custom-checkbox mr-sm-2">
+                                                <input type="checkbox" class="custom-control-input" name="chkpol" id="customControlAutosizing">
+                                                <label  class="custom-control-label" for="customControlAutosizing">Acepto las <a href="#">politicas de privacidad</a></label>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <button class="btn btn-success btn-sm btn-enviar">
+                                                Entrar
+                                            </button>    
+                                        </div>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -153,6 +86,8 @@
 
         <div class="container body-margin">
 
+                
+                    
             <div class="title ml-auto md-auto">
                 <h1 class="text-center">Nos especializamos en:</h1>
                 <div class="orange-line"></div>
@@ -227,7 +162,7 @@
                 </div>
             </div>
         </div>            
-
+        
     </div>
     </section>
     <section id="ITSYSTEMS-PIE">
@@ -241,7 +176,8 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="js/jquery-3.4.1.slim.min.js"></script>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery-validate.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/index.js"></script>

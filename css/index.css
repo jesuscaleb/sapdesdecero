@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -8710,23 +8711,23 @@ body {
 
 #page-content {
   flex: 1 0 auto;
-  margin-top: 5%; }
+  margin-top: 8%; }
 
 /* Navbar */
 #nav-item {
   padding-left: 30px;
   padding-right: 30px;
-  color: #FFFFFF;
+  color: gray;
   font-family: Lato;
   font-weight: bold;
   font-size: 18px;
   text-decoration: none; }
   #nav-item span:hover {
     border-bottom: 4px solid;
-    border-color: #e94a48; }
+    border-color: rgba(0, 102, 51, 0.7); }
 
 .navbar-custom {
-  background-color: #48519e; }
+  background-color: #FFFFFF; }
 
 /* Footer */
 #sticky-footer {
@@ -8741,7 +8742,6 @@ img {
   max-width: 50%;
   max-height: auto; }
 
-/* Carrousel Transition Effect */
 /* Background images for Carrousel*/
 .bkimg1 {
   background-image: url("../img/SAPBUSINESSONE.png"); }
@@ -8811,5 +8811,40 @@ img {
     padding-right: 6px;
     padding-top: 2px;
     padding-bottom: 2px; }
+
+/* Registration Form */
+.frm-container {
+  background-color: #33064a;
+  padding-top: 30px;
+  padding-bottom: 5px;
+  padding-right: 32px;
+  padding-left: 32px; }
+  .frm-container h4 {
+    text-align: center;
+    color: #FFFFFF;
+    font-family: Gothan;
+    font-weight: bold; }
+  .frm-container p {
+    text-align: justify;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-family: Gothan Book;
+    padding-left: 5px;
+    padding-right: 5px; }
+  .frm-container input, .frm-container select {
+    border-radius: 0px; }
+  .frm-container label {
+    font-size: 13px;
+    color: white;
+    font-family: Gothan Book; }
+  .frm-container .btn-enviar {
+    border-radius: 0px;
+    /* TODO: Aplicar el formato de color apropiado para el bot├│n Enviar*/
+    border-color: green;
+    background-color: green;
+    font-family: Gothan Book; }
+  .frm-container .error {
+    color: #e94a48;
+    font-size: 13px; }
 
 /*# sourceMappingURL=index.css.map */
