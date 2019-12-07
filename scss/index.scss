@@ -66,6 +66,10 @@ img{
   max-width: 50%;
   max-height: auto;
 }
+
+/* Carrousel Transition Effect */
+
+
 /* Background images for Carrousel*/
 
 .bkimg1{
@@ -83,7 +87,7 @@ img{
 .bkimg-det{
   background-size:     cover;                   
   background-repeat:   no-repeat;
-  background-position: center center;    
+  background-position: center;    
   height: 440px;
   width: 1580px;
   max-height: 440px;

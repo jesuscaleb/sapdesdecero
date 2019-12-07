@@ -1575,6 +1575,7 @@ pre {
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
   @media (prefers-reduced-motion: reduce) {
     .form-control {
+      /*REMINDME: Si el sistema operativo del usuario ha configurado desactivar las animaciones, configurar esta linea*/
       transition: none; } }
   .form-control::-ms-expand {
     background-color: transparent;
@@ -1913,6 +1914,7 @@ textarea.form-control {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
   @media (prefers-reduced-motion: reduce) {
     .btn {
+      /*REMINDME: Si el sistema operativo del usuario ha configurado desactivar las animaciones, configurar esta linea*/
       transition: none; } }
   .btn:hover {
     color: #212529;
@@ -2312,6 +2314,7 @@ input[type="button"].btn-block {
   transition: opacity 0.15s linear; }
   @media (prefers-reduced-motion: reduce) {
     .fade {
+      /*REMINDME: Si el sistema operativo del usuario ha configurado desactivar las animaciones, configurar esta linea*/
       transition: none; } }
   .fade:not(.show) {
     opacity: 0; }
@@ -2326,6 +2329,7 @@ input[type="button"].btn-block {
   transition: height 0.35s ease; }
   @media (prefers-reduced-motion: reduce) {
     .collapsing {
+      /*REMINDME: Si el sistema operativo del usuario ha configurado desactivar las animaciones, configurar esta linea*/
       transition: none; } }
 
 .dropup,
@@ -2847,6 +2851,7 @@ input[type="button"].btn-block {
     transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
     @media (prefers-reduced-motion: reduce) {
       .custom-switch .custom-control-label::after {
+        /*REMINDME: Si el sistema operativo del usuario ha configurado desactivar las animaciones, configurar esta linea*/
         transition: none; } }
   .custom-switch .custom-control-input:checked ~ .custom-control-label::after {
     background-color: #fff;
@@ -2983,6 +2988,7 @@ input[type="button"].btn-block {
     appearance: none; }
     @media (prefers-reduced-motion: reduce) {
       .custom-range::-webkit-slider-thumb {
+        /*REMINDME: Si el sistema operativo del usuario ha configurado desactivar las animaciones, configurar esta linea*/
         transition: none; } }
     .custom-range::-webkit-slider-thumb:active {
       background-color: #b3d7ff; }
@@ -3004,6 +3010,7 @@ input[type="button"].btn-block {
     appearance: none; }
     @media (prefers-reduced-motion: reduce) {
       .custom-range::-moz-range-thumb {
+        /*REMINDME: Si el sistema operativo del usuario ha configurado desactivar las animaciones, configurar esta linea*/
         transition: none; } }
     .custom-range::-moz-range-thumb:active {
       background-color: #b3d7ff; }
@@ -3028,6 +3035,7 @@ input[type="button"].btn-block {
     appearance: none; }
     @media (prefers-reduced-motion: reduce) {
       .custom-range::-ms-thumb {
+        /*REMINDME: Si el sistema operativo del usuario ha configurado desactivar las animaciones, configurar esta linea*/
         transition: none; } }
     .custom-range::-ms-thumb:active {
       background-color: #b3d7ff; }
@@ -3065,6 +3073,7 @@ input[type="button"].btn-block {
     .custom-control-label::before,
     .custom-file-label,
     .custom-select {
+      /*REMINDME: Si el sistema operativo del usuario ha configurado desactivar las animaciones, configurar esta linea*/
       transition: none; } }
 
 .nav {
@@ -3677,6 +3686,7 @@ input[type="button"].btn-block {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
   @media (prefers-reduced-motion: reduce) {
     .badge {
+      /*REMINDME: Si el sistema operativo del usuario ha configurado desactivar las animaciones, configurar esta linea*/
       transition: none; } }
   a.badge:hover, a.badge:focus {
     text-decoration: none; }
@@ -3905,6 +3915,7 @@ input[type="button"].btn-block {
   transition: width 0.6s ease; }
   @media (prefers-reduced-motion: reduce) {
     .progress-bar {
+      /*REMINDME: Si el sistema operativo del usuario ha configurado desactivar las animaciones, configurar esta linea*/
       transition: none; } }
 
 .progress-bar-striped {
@@ -4235,6 +4246,7 @@ a.close.disabled {
     transform: translate(0, -50px); }
     @media (prefers-reduced-motion: reduce) {
       .modal.fade .modal-dialog {
+        /*REMINDME: Si el sistema operativo del usuario ha configurado desactivar las animaciones, configurar esta linea*/
         transition: none; } }
   .modal.show .modal-dialog {
     transform: none; }
@@ -4589,6 +4601,7 @@ a.close.disabled {
   transition: transform 0.6s ease-in-out; }
   @media (prefers-reduced-motion: reduce) {
     .carousel-item {
+      /*REMINDME: Si el sistema operativo del usuario ha configurado desactivar las animaciones, configurar esta linea*/
       transition: none; } }
 
 .carousel-item.active,
@@ -4621,6 +4634,7 @@ a.close.disabled {
   @media (prefers-reduced-motion: reduce) {
     .carousel-fade .active.carousel-item-left,
     .carousel-fade .active.carousel-item-right {
+      /*REMINDME: Si el sistema operativo del usuario ha configurado desactivar las animaciones, configurar esta linea*/
       transition: none; } }
 
 .carousel-control-prev,
@@ -4640,6 +4654,7 @@ a.close.disabled {
   @media (prefers-reduced-motion: reduce) {
     .carousel-control-prev,
     .carousel-control-next {
+      /*REMINDME: Si el sistema operativo del usuario ha configurado desactivar las animaciones, configurar esta linea*/
       transition: none; } }
   .carousel-control-prev:hover, .carousel-control-prev:focus,
   .carousel-control-next:hover,
@@ -4697,6 +4712,7 @@ a.close.disabled {
     transition: opacity 0.6s ease; }
     @media (prefers-reduced-motion: reduce) {
       .carousel-indicators li {
+        /*REMINDME: Si el sistema operativo del usuario ha configurado desactivar las animaciones, configurar esta linea*/
         transition: none; } }
   .carousel-indicators .active {
     opacity: 1; }
@@ -8725,6 +8741,7 @@ img {
   max-width: 50%;
   max-height: auto; }
 
+/* Carrousel Transition Effect */
 /* Background images for Carrousel*/
 .bkimg1 {
   background-image: url("../img/SAPBUSINESSONE.png"); }
@@ -8738,7 +8755,7 @@ img {
 .bkimg-det {
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center;
   height: 440px;
   width: 1580px;
   max-height: 440px;
