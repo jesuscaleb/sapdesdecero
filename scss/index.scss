@@ -1,17 +1,22 @@
 @import "bootstrap/bootstrap";
 @import "fonts";
 
-/* Colors*/
+/* Pure Colors*/
 $hd-blue: rgb(72,81,158);
-$hd-purple: rgb(51, 6, 74);
+$hd-purple: rgb(51, 6, 74); 
 $hd-red: rgb(233,74,72);
-$crsl-yellow: rgb(255,255,0);
-$rgba-blue: rgba(48, 61, 136, 0.7);
-$rgba-green: rgba(0, 102, 51, 0.7);
-$rgba-purple: rgba(51, 6, 74, 0.7);
-$rgba-lgtblue:rgba(44, 151, 199,0.7);
+$hd-green: rgb(0, 102, 51);
 $hd-white: #FFFFFF;
-$hd-gray: gray;
+$hd-gray: rgb(102,102,102);
+$hd-yellow: rgb(255,255,0);
+
+
+/* Colors with opacity */
+$rgba-black: rgba(0, 0, 0,0.80);
+$rgba-blue: rgba(48, 61, 136, 0.85);
+$rgba-green: rgba(0, 102, 51, 0.7);
+$rgba-purple: rgba(51, 6, 74, 0.89);
+$rgba-lgtblue:rgba(44, 151, 199,0.7);
 
 /* Images */
 $bkimg1: '../img/SAPBUSINESSONE.png';
@@ -39,7 +44,7 @@ body {
     padding-left:30px;
     padding-right:30px;
     color: $hd-gray;
-    font-family: Lato;
+    font-family: Lato, sans-serif;
     font-weight: bold;
     font-size: 18px;
     text-decoration: none;
@@ -101,7 +106,7 @@ img{
 }
 
 .bklyr-color1{
-  background-color: $rgba-blue;
+  background-color: $rgba-purple;
 }
 
 .bklyr-color2{
@@ -112,53 +117,71 @@ img{
   background-color: $rgba-lgtblue;
 }
 
-/* Carrousel Content */
+/* Body Head Content */
 
-.bkimg-det {
+.home-banner {
+  padding: 30px;
   h2{
-    color: white;
+    text-align: center;
+    color: $hd-white;
     font-family: Gothan;
-    font-weight: bold;
   }
 
   h4{
-    color: $crsl-yellow;
-    font-family: Gothan;
-    font-weight: bold;
+    color: $hd-yellow;
     text-align: center;
+    font-family: Gothan ;
+    font-weight: bold;
   }
 
   .sub{
     color: $hd-white;
+    text-align: center;
     font-family: Gothan;
     font-weight: bold;
-    text-align: center;
-  }
-
-  .desc{
-    color: $hd-white;
-    font-family: Gothan Book;
-    span{
-      padding-bottom: 4px;
-      border-bottom: 2px solid;
-      border-color: $hd-red;
-    }
   }
 
   .btn-entrar{
     text-align: center;
-    font-family: Gothan Book;
-    color: $hd-white;
-    a {
-      border: 2px solid;
-      border-color: $hd-red;
-      text-decoration: none;
-      cursor: pointer;
+    span{
+      background-color: $hd-green;
       padding-left: 6px;
       padding-right: 6px;
-      padding-top:2px;
-      padding-bottom:2px;
+      padding-bottom: 2px;
     }
+    a{
+      text-decoration: none;
+      color: $hd-white;
+      font-size: 14px;
+      font-family: Gothan Book;
+      
+    }
+    
+  }
+}
+
+.curso-banner {
+  padding: 50px;
+  background-color: $rgba-blue;
+
+  img{
+    max-width: 150px;
+    max-height: auto;
+    padding-bottom: 10px;
+
+  }
+  h2{
+    color: $hd-white;
+    font-family: Gothan;
+    font-weight: bold;
+    padding-top: 10px;
+  }
+
+  p{
+    color: $hd-white;
+    font-family: Gothan Book;
+    font-weight: bold;
+    padding-top: 20px;
   }
 }
 
@@ -191,21 +214,282 @@ img{
 
   label{
     font-size: 13px;
-    color:white;
+    color:$hd-white;
     font-family: Gothan Book;
   }
 
   .btn-enviar{
     border-radius: 0px;
     /* TODO: Aplicar el formato de color apropiado para el botón Enviar*/
-    border-color: green;
-    background-color: green;
+    border-color: $hd-green;
+    background-color: $hd-green;
     font-family: Gothan Book;
   }
+
   .error{
     color: $hd-red;
     font-size: 13px;
   }
+}
 
- 
+.title{
+
+  h1{
+    font-family: Gothan;
+    font-weight: bold;
+    color: $hd-purple;
+    text-align: center;
+    
+  }
+  h5{
+    font-family: Gothan Book;
+    text-align: center;  
+    strong{
+      font-family: Gothan;
+      font-weight: bold;
+      
+    }
+  }
+}
+
+/* Custom HTML bullets */
+ul {
+  list-style: none; /* Remove HTML bullets */
+  padding: 0;
+  margin: 0;
+}
+
+li { 
+  padding-left: 16px; 
+  text-align: left;
+}
+
+li::before {
+  content: "-"; /* Insert content that looks like bullets */
+  padding-right: 1px;
+  color: $hd-gray; /* Or a color you prefer */
+}
+
+/* SAP Classes Cards*/
+
+.card{
+  border-radius: 0px;
+  border: 0px;
+  height: 450px;
+}
+
+.card-content{
+  padding-top:5px;
+  p{
+    text-align: center;
+    font-family: Gothan Book;
+    font-weight: bold; 
+    color: $hd-gray;
+  }
+  ul li {
+    font-family: Gothan Book;
+    font-weight: bold;
+    font-size: 14px;
+    color: $hd-gray;
+  }
+}
+
+.card-foot{
+  background-color: $hd-purple;
+  padding:7px;
+  color: $hd-white;
+  p{
+    margin-bottom: 0px;
+    text-align: center;
+    span{
+      font-family: Gothan;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .entrar{
+      font-family: Gothan Book;
+      font-size: 13px;
+      background-color: $hd-green;
+      text-decoration: none;
+      color: $hd-white;
+      margin-left: 10px;
+      padding-right: 15px;
+      padding-left: 15px;
+      padding-top: 2px;
+      padding-bottom: 2px;
+    }
+  }
+
+  .green-ray{
+    border: 1px $hd-green solid;
+  }
+
+}
+
+.card-appart{
+  
+  p{
+    text-align: center;
+    margin-bottom: 0px;
+  }
+
+  .appart-title{
+    font-family: Gothan;
+    font-weight: bold;
+    color: $hd-gray;
+  }
+
+  .appart-sub{
+    font-family: Gothan Book;
+    font-weight: bold;
+    font-size: 14px;
+    color: $hd-purple;
+    span{
+      padding-left: 5px;
+      padding-right:5px;
+      padding-bottom: 1px;
+      border-bottom: 2px $hd-green solid;
+    }
+  }
+}
+
+/* Form Section*/
+
+.bgform{
+  background-color: $hd-green;
+}
+
+.form-title{
+  color: $hd-white;
+  padding-top: 40px;
+  h5{
+    font-family: Gothan Book;
+    font-weight: bold;
+  }
+  p{
+    font-family: Gothan Book;
+  }
+}
+
+.reg-form2{
+  padding:30px;
+  input,select{
+    border-radius: 0px;
+  }
+  label{
+    
+    color:$hd-white;
+    font-family: Gothan Book;
+  }
+  .form-row{
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .btn-enviar{
+    border-radius: 0px;
+    /* TODO: Aplicar el formato de color apropiado para el botón Enviar*/
+    border-color: $hd-purple;
+    background-color: $hd-purple;
+    font-family: Gothan Book;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .error{
+    color: $hd-red;
+    font-size: 13px;
+  }
+}
+
+/* Benefits Section  */
+.bg-benefit{
+  background-color: $hd-purple;
+  .container{
+    padding-bottom:30px;
+  }
+}
+
+.title2{
+  padding-top:50px;
+  padding-bottom:30px;
+  h2{
+    font-family: Gothan;
+    font-weight: bold;
+    color: $hd-white;
+    text-align: center;
+    margin-bottom: 0px;
+  }
+}
+
+.icon-item{
+  img{
+    width: 70px;
+    height: auto;
+  }
+  p{  
+    color: $hd-white;
+    font-family: Gothan;
+    font-size: 15px;
+    padding-top:25px;
+  }
+}
+
+/* Backup Section*/
+
+.green-underline{
+  border-bottom: 5px $hd-green solid;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+#title-backup{
+  padding-top: 50px;
+}
+
+.col-backup{
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+/* Footer */
+
+.bg-footer1{
+  background-color: $hd-purple;
+}
+
+.bg-footer2{
+  background-color: $rgba-black;
+  font-family: Gothan Book;
+}
+
+.footer-row{
+  padding-top: 30px;
+  padding-bottom: 20px;
+  color: $hd-white;
+  font-family: Gothan Book;
+  font-weight: bold;
+  font-size: 13px;
+  text-align: justify;
+  h5{
+    font-family: Gothan;
+    font-weight: bold;
+    padding-bottom: 20px;
+  }
+
+  .btn-entrar{
+    
+    span{
+      background-color: $hd-green;
+      padding: 7px;
+    }
+    a{
+      text-decoration: none;
+      color: $hd-white;
+      font-size: 14px;
+      font-family: Gothan Book;
+      
+    }
+    
+  }
 }

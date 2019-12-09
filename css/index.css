@@ -8698,7 +8698,8 @@ a.text-dark:hover, a.text-dark:focus {
   font-family: Gothan Ultra;
   font-style: italic;
   src: url("../fonts/Gotham-UltraItalic.otf") format("opentype"); }
-/* Colors*/
+/* Pure Colors*/
+/* Colors with opacity */
 /* Images */
 /* Main CSS */
 html,
@@ -8717,8 +8718,8 @@ body {
 #nav-item {
   padding-left: 30px;
   padding-right: 30px;
-  color: gray;
-  font-family: Lato;
+  color: #666666;
+  font-family: Lato, sans-serif;
   font-weight: bold;
   font-size: 18px;
   text-decoration: none; }
@@ -8768,7 +8769,7 @@ img {
   height: 100%; }
 
 .bklyr-color1 {
-  background-color: rgba(48, 61, 136, 0.7); }
+  background-color: rgba(51, 6, 74, 0.89); }
 
 .bklyr-color2 {
   background-color: rgba(0, 102, 51, 0.7); }
@@ -8776,41 +8777,53 @@ img {
 .bklyr-color3 {
   background-color: rgba(44, 151, 199, 0.7); }
 
-/* Carrousel Content */
-.bkimg-det h2 {
-  color: white;
-  font-family: Gothan;
-  font-weight: bold; }
-.bkimg-det h4 {
-  color: yellow;
-  font-family: Gothan;
-  font-weight: bold;
-  text-align: center; }
-.bkimg-det .sub {
-  color: #FFFFFF;
-  font-family: Gothan;
-  font-weight: bold;
-  text-align: center; }
-.bkimg-det .desc {
-  color: #FFFFFF;
-  font-family: Gothan Book; }
-  .bkimg-det .desc span {
-    padding-bottom: 4px;
-    border-bottom: 2px solid;
-    border-color: #e94a48; }
-.bkimg-det .btn-entrar {
-  text-align: center;
-  font-family: Gothan Book;
-  color: #FFFFFF; }
-  .bkimg-det .btn-entrar a {
-    border: 2px solid;
-    border-color: #e94a48;
-    text-decoration: none;
-    cursor: pointer;
-    padding-left: 6px;
-    padding-right: 6px;
-    padding-top: 2px;
-    padding-bottom: 2px; }
+/* Body Head Content */
+.home-banner {
+  padding: 30px; }
+  .home-banner h2 {
+    text-align: center;
+    color: #FFFFFF;
+    font-family: Gothan; }
+  .home-banner h4 {
+    color: yellow;
+    text-align: center;
+    font-family: Gothan;
+    font-weight: bold; }
+  .home-banner .sub {
+    color: #FFFFFF;
+    text-align: center;
+    font-family: Gothan;
+    font-weight: bold; }
+  .home-banner .btn-entrar {
+    text-align: center; }
+    .home-banner .btn-entrar span {
+      background-color: #006633;
+      padding-left: 6px;
+      padding-right: 6px;
+      padding-bottom: 2px; }
+    .home-banner .btn-entrar a {
+      text-decoration: none;
+      color: #FFFFFF;
+      font-size: 14px;
+      font-family: Gothan Book; }
+
+.curso-banner {
+  padding: 50px;
+  background-color: rgba(48, 61, 136, 0.85); }
+  .curso-banner img {
+    max-width: 150px;
+    max-height: auto;
+    padding-bottom: 10px; }
+  .curso-banner h2 {
+    color: #FFFFFF;
+    font-family: Gothan;
+    font-weight: bold;
+    padding-top: 10px; }
+  .curso-banner p {
+    color: #FFFFFF;
+    font-family: Gothan Book;
+    font-weight: bold;
+    padding-top: 20px; }
 
 /* Registration Form */
 .frm-container {
@@ -8835,16 +8848,210 @@ img {
     border-radius: 0px; }
   .frm-container label {
     font-size: 13px;
-    color: white;
+    color: #FFFFFF;
     font-family: Gothan Book; }
   .frm-container .btn-enviar {
     border-radius: 0px;
     /* TODO: Aplicar el formato de color apropiado para el bot├│n Enviar*/
-    border-color: green;
-    background-color: green;
+    border-color: #006633;
+    background-color: #006633;
     font-family: Gothan Book; }
   .frm-container .error {
     color: #e94a48;
     font-size: 13px; }
+
+.title h1 {
+  font-family: Gothan;
+  font-weight: bold;
+  color: #33064a;
+  text-align: center; }
+.title h5 {
+  font-family: Gothan Book;
+  text-align: center; }
+  .title h5 strong {
+    font-family: Gothan;
+    font-weight: bold; }
+
+/* Custom HTML bullets */
+ul {
+  list-style: none;
+  /* Remove HTML bullets */
+  padding: 0;
+  margin: 0; }
+
+li {
+  padding-left: 16px;
+  text-align: left; }
+
+li::before {
+  content: "-";
+  /* Insert content that looks like bullets */
+  padding-right: 1px;
+  color: #666666;
+  /* Or a color you prefer */ }
+
+/* SAP Classes Cards*/
+.card {
+  border-radius: 0px;
+  border: 0px;
+  height: 450px; }
+
+.card-content {
+  padding-top: 5px; }
+  .card-content p {
+    text-align: center;
+    font-family: Gothan Book;
+    font-weight: bold;
+    color: #666666; }
+  .card-content ul li {
+    font-family: Gothan Book;
+    font-weight: bold;
+    font-size: 14px;
+    color: #666666; }
+
+.card-foot {
+  background-color: #33064a;
+  padding: 7px;
+  color: #FFFFFF; }
+  .card-foot p {
+    margin-bottom: 0px;
+    text-align: center; }
+    .card-foot p span {
+      font-family: Gothan;
+      font-weight: bold;
+      font-size: 14px; }
+    .card-foot p .entrar {
+      font-family: Gothan Book;
+      font-size: 13px;
+      background-color: #006633;
+      text-decoration: none;
+      color: #FFFFFF;
+      margin-left: 10px;
+      padding-right: 15px;
+      padding-left: 15px;
+      padding-top: 2px;
+      padding-bottom: 2px; }
+  .card-foot .green-ray {
+    border: 1px #006633 solid; }
+
+.card-appart p {
+  text-align: center;
+  margin-bottom: 0px; }
+.card-appart .appart-title {
+  font-family: Gothan;
+  font-weight: bold;
+  color: #666666; }
+.card-appart .appart-sub {
+  font-family: Gothan Book;
+  font-weight: bold;
+  font-size: 14px;
+  color: #33064a; }
+  .card-appart .appart-sub span {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 1px;
+    border-bottom: 2px #006633 solid; }
+
+/* Form Section*/
+.bgform {
+  background-color: #006633; }
+
+.form-title {
+  color: #FFFFFF;
+  padding-top: 40px; }
+  .form-title h5 {
+    font-family: Gothan Book;
+    font-weight: bold; }
+  .form-title p {
+    font-family: Gothan Book; }
+
+.reg-form2 {
+  padding: 30px; }
+  .reg-form2 input, .reg-form2 select {
+    border-radius: 0px; }
+  .reg-form2 label {
+    color: #FFFFFF;
+    font-family: Gothan Book; }
+  .reg-form2 .form-row {
+    padding-top: 10px;
+    padding-bottom: 10px; }
+  .reg-form2 .btn-enviar {
+    border-radius: 0px;
+    /* TODO: Aplicar el formato de color apropiado para el bot├│n Enviar*/
+    border-color: #33064a;
+    background-color: #33064a;
+    font-family: Gothan Book;
+    padding-left: 10px;
+    padding-right: 10px; }
+  .reg-form2 .error {
+    color: #e94a48;
+    font-size: 13px; }
+
+/* Benefits Section  */
+.bg-benefit {
+  background-color: #33064a; }
+  .bg-benefit .container {
+    padding-bottom: 30px; }
+
+.title2 {
+  padding-top: 50px;
+  padding-bottom: 30px; }
+  .title2 h2 {
+    font-family: Gothan;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 0px; }
+
+.icon-item img {
+  width: 70px;
+  height: auto; }
+.icon-item p {
+  color: #FFFFFF;
+  font-family: Gothan;
+  font-size: 15px;
+  padding-top: 25px; }
+
+/* Backup Section*/
+.green-underline {
+  border-bottom: 5px #006633 solid;
+  padding-right: 30px;
+  padding-left: 30px; }
+
+#title-backup {
+  padding-top: 50px; }
+
+.col-backup {
+  padding-top: 80px;
+  padding-bottom: 80px; }
+
+/* Footer */
+.bg-footer1 {
+  background-color: #33064a; }
+
+.bg-footer2 {
+  background-color: rgba(0, 0, 0, 0.8);
+  font-family: Gothan Book; }
+
+.footer-row {
+  padding-top: 30px;
+  padding-bottom: 20px;
+  color: #FFFFFF;
+  font-family: Gothan Book;
+  font-weight: bold;
+  font-size: 13px;
+  text-align: justify; }
+  .footer-row h5 {
+    font-family: Gothan;
+    font-weight: bold;
+    padding-bottom: 20px; }
+  .footer-row .btn-entrar span {
+    background-color: #006633;
+    padding: 7px; }
+  .footer-row .btn-entrar a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-family: Gothan Book; }
 
 /*# sourceMappingURL=index.css.map */
