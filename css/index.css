@@ -8715,17 +8715,20 @@ body {
   margin-top: 8%; }
 
 /* Navbar */
-#nav-item {
+.navbar-item {
   padding-left: 30px;
   padding-right: 30px;
-  color: #666666;
+  color: #666666 !important;
   font-family: Lato, sans-serif;
   font-weight: bold;
   font-size: 18px;
-  text-decoration: none; }
-  #nav-item span:hover {
+  text-decoration: none !important; }
+  .navbar-item span:hover {
     border-bottom: 4px solid;
     border-color: rgba(0, 102, 51, 0.7); }
+
+.dropdown-menu {
+  border-radius: 0px; }
 
 .navbar-custom {
   background-color: #FFFFFF; }
@@ -8872,24 +8875,6 @@ img {
     font-family: Gothan;
     font-weight: bold; }
 
-/* Custom HTML bullets */
-ul {
-  list-style: none;
-  /* Remove HTML bullets */
-  padding: 0;
-  margin: 0; }
-
-li {
-  padding-left: 16px;
-  text-align: left; }
-
-li::before {
-  content: "-";
-  /* Insert content that looks like bullets */
-  padding-right: 1px;
-  color: #666666;
-  /* Or a color you prefer */ }
-
 /* SAP Classes Cards*/
 .card {
   border-radius: 0px;
@@ -8897,7 +8882,22 @@ li::before {
   height: 450px; }
 
 .card-content {
-  padding-top: 5px; }
+  padding-top: 5px;
+  /* Custom HTML bullets */ }
+  .card-content ul {
+    list-style: none;
+    /* Remove HTML bullets */
+    padding: 0;
+    margin: 0; }
+  .card-content li {
+    padding-left: 16px;
+    text-align: left; }
+  .card-content li::before {
+    content: "-";
+    /* Insert content that looks like bullets */
+    padding-right: 1px;
+    color: #666666;
+    /* Or a color you prefer */ }
   .card-content p {
     text-align: center;
     font-family: Gothan Book;
@@ -9024,6 +9024,9 @@ li::before {
 .col-backup {
   padding-top: 80px;
   padding-bottom: 80px; }
+  .col-backup img {
+    width: 75%;
+    height: auto; }
 
 /* Footer */
 .bg-footer1 {
@@ -9053,5 +9056,24 @@ li::before {
     color: #FFFFFF;
     font-size: 14px;
     font-family: Gothan Book; }
+
+.circle-border {
+  width: 100px;
+  height: 100px;
+  border: 2px #006633 solid;
+  -moz-border-radius: 70px;
+  -webkit-border-radius: 70px;
+  border-radius: 70px; }
+  .circle-border img {
+    padding-top: 12px;
+    padding-left: 3px; }
+
+.circle {
+  width: 60px;
+  height: 60px;
+  background: #33064a;
+  -moz-border-radius: 70px;
+  -webkit-border-radius: 70px;
+  border-radius: 70px; }
 
 /*# sourceMappingURL=index.css.map */

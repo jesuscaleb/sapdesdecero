@@ -40,23 +40,28 @@ body {
 }
 
 /* Navbar */
-#nav-item{
+.navbar-item{
     padding-left:30px;
     padding-right:30px;
-    color: $hd-gray;
+    color: $hd-gray !important;
     font-family: Lato, sans-serif;
     font-weight: bold;
     font-size: 18px;
-    text-decoration: none;
+    text-decoration: none !important;
     span:hover{
       border-bottom: 4px solid;
       border-color: $rgba-green;
     }
 }
 
+.dropdown-menu{
+  border-radius: 0px;
+}
+
 .navbar-custom {
     background-color: $hd-white;
 }
+
 
 /* Footer */
 #sticky-footer {
@@ -252,23 +257,6 @@ img{
   }
 }
 
-/* Custom HTML bullets */
-ul {
-  list-style: none; /* Remove HTML bullets */
-  padding: 0;
-  margin: 0;
-}
-
-li { 
-  padding-left: 16px; 
-  text-align: left;
-}
-
-li::before {
-  content: "-"; /* Insert content that looks like bullets */
-  padding-right: 1px;
-  color: $hd-gray; /* Or a color you prefer */
-}
 
 /* SAP Classes Cards*/
 
@@ -280,6 +268,23 @@ li::before {
 
 .card-content{
   padding-top:5px;
+  /* Custom HTML bullets */
+  ul {
+    list-style: none; /* Remove HTML bullets */
+    padding: 0;
+    margin: 0;
+  }
+  
+  li { 
+    padding-left: 16px; 
+    text-align: left;
+  }
+  
+  li::before {
+    content: "-"; /* Insert content that looks like bullets */
+    padding-right: 1px;
+    color: $hd-gray; /* Or a color you prefer */
+  }
   p{
     text-align: center;
     font-family: Gothan Book;
@@ -450,6 +455,10 @@ li::before {
 .col-backup{
   padding-top: 80px;
   padding-bottom: 80px;
+  img{
+    width: 75%;
+    height: auto;
+  }
 }
 
 /* Footer */
@@ -492,4 +501,26 @@ li::before {
     }
     
   }
+}
+
+.circle-border{
+  width: 100px;
+  height: 100px;
+  border: 2px $hd-green solid;
+  -moz-border-radius: 70px; 
+  -webkit-border-radius: 70px; 
+  border-radius: 70px;
+  img{
+    padding-top: 12px;
+    padding-left: 3px;
+  }
+}
+
+.circle{
+  width: 60px;
+  height: 60px;
+  background: $hd-purple; 
+  -moz-border-radius: 70px; 
+  -webkit-border-radius: 70px; 
+  border-radius: 70px;
 }

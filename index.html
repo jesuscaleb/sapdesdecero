@@ -8,34 +8,53 @@
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
     <title>Sap desde Cero</title>
 </head>
-<body class="d-flex flex-column">
+<body class="d-flex flex-column jumphere">
     <!-- Header -->
     <section id="ITSYSTEMS-HEADER" >
-        
-        <nav class="navbar fixed-top navbar-custom" >
+        <nav class="navbar fixed-top  navbar-expand-lg navbar-custom ">
             <div class="container">
-                
-                <a class="navbar-brand mr-auto" href="#a">
+                <a class="navbar-brand mr-auto" href="../index.html">
                     <img class="logo" src="img/logos/sap.png" alt="">
                 </a>
-                <a class="nav-item" id='nav-item' href="#a"><span>INICIO</span></a>
-                <a class="nav-item " id='nav-item' href="#a"><span>CURSOS</span></a>
-                <a class="nav-item " id='nav-item' href="#a"><span>ADMISIÓN</span></a>
-                <a class="nav-item " id='nav-item' href="#a"><span>CONTÁCTANOS</span></a>
-                <a class="nav-item " id='nav-item' href="#a">
-                    
-                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto topnav">
+                        <li class="nav-item active">
+                            <a class="navbar-item" href="../index.html"><span>INICIO</span></a>
+                        </li>
+                        <li class="dropdown">
+                            <a class="navbar-item dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span>CURSOS</span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="../sapb1.html">SAP Business One</a>
+                                <a class="dropdown-item" href="../sapmm.html">SAP Gestión Logística y Almacén</a>
+                                <a class="dropdown-item" href="../sapf1.html">SAP Contabilidad y Finanzas</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a  class="navbar-item" href="../admision.html"><span>ADMISIÓN</span></a>
+                        </li>
+                        <li>
+                            <a  class="navbar-item" href="#"><span>CONTÁCTENOS</span></a>
+                        </li>
+                        
+                    </ul>
+                </div>
             </div>
         </nav>
     </section>
     <!-- Body -->
     <section id="ITSYSTEMS-BODY">
         
-        <div id="page-content">
+        <div class="mt-8 mt-md-8" id="page-content">
     
             <!-- Body Header (Background Image)-->
             <section id="ITSYSTEMS-TOP">
-            <div class="bkimg1 d-block w-100">
+            <div class="bkimg1  d-block w-100">
                 <div class="bk-layer bklyr-color1">
                 <div class="container-fluid">
                     <div class="row">
@@ -98,11 +117,10 @@
                                             </div>
                                             <div class="form-group">
                                                 <select name="selcur" class="form-control form-control-sm">
-                                                        <option value="default">Selecciona un curso </option>
-                                                        <option value="1">Curso 1 </option>
-                                                        <option value="2">Curso 2 </option>
-                                                        <option value="3">Curso 3 </option>
-                                                        <option value="4">Curso 4 </option>
+                                                        <option value="default">Curso de interés </option>
+                                                    <option value="1">SAP Business One </option>
+                                                    <option value="2">SAP Gestión  Logística y Almacén</option>
+                                                    <option value="3">SAP Contabilidad y Finanzas </option>
                                                 </select>
                                             </div>
                                             <div class="form-group">
@@ -251,33 +269,32 @@
                                 </div>
                             </div>
                             <div class="col-md-8">
-                                <form class="reg-form2">
+                                <form class="reg-form2" id="reg-form2">
                                     <div class="form-row">
                                         <div class="col">
                                             <input class="form-control form-control-sm" name="txtnom2" type="text" placeholder="Nombres completos">
                                         </div>
                                         <div class="col">
-                                            <input class="form-control form-control-sm" name="txtcel" type="text" placeholder="Numero de celular">   
+                                            <input class="form-control form-control-sm" name="txtcel2" type="text" placeholder="Numero de celular">   
                                         </div>
                                     </div>
                                     <div class="form-row">
                                         <div class="col">
-                                            <input class="form-control form-control-sm" name="txtemail" type="text" placeholder="Correo electronico">
+                                            <input class="form-control form-control-sm" name="txtemail2" type="text" placeholder="Correo electronico">
                                         </div>
                                         <div class="col">
-                                            <select name="selcur" class="form-control form-control-sm">
-                                                    <option value="default">Selecciona un curso </option>
-                                                    <option value="1">Curso 1 </option>
-                                                    <option value="2">Curso 2 </option>
-                                                    <option value="3">Curso 3 </option>
-                                                    <option value="4">Curso 4 </option>
+                                            <select name="selcur2" class="form-control form-control-sm">
+                                                    <option value="default">Curso de interés </option>
+                                                    <option value="1">SAP Business One </option>
+                                                    <option value="2">SAP Gestión  Logística y Almacén</option>
+                                                    <option value="3">SAP Contabilidad y Finanzas </option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="form-row">
-                                        <div class="col">
+                                        <div class="col-6">
                                             <div class="custom-control custom-checkbox mr-sm-2">
-                                                <input type="checkbox" class="custom-control-input" name="chkpol" id="customControlAutosizing">
+                                                <input type="checkbox" class="custom-control-input" name="chkpol2" id="customControlAutosizing">
                                                 <label  class="custom-control-label" for="customControlAutosizing">Acepto las <a href="#">politicas de privacidad</a></label>
                                             </div>
                                         </div>
@@ -306,40 +323,52 @@
                         <div class="row">
                             <div class="col-md-4 text-center">
                                 <div class="icon-item">
-                                    <img src="img/icons/laptop.png" alt="">
+                                    <div class="circle-border mx-auto">
+                                        <img src="img/icons/laptop.png" alt="">
+                                    </div>
                                     <p> 1 Laptop por Alumno</p>
                                 </div>
                             </div>    
                             <div class="col-md-4 text-center">
                                 <div class="icon-item">
-                                    <img src="img/icons/sapaccess.png" alt="">
+                                    <div class="circle-border mx-auto">
+                                        <img src="img/icons/sapaccess.png" alt="">
+                                    </div>
                                     <p> Acceso a SAP desde el primer día de clases y hasta por 4 meses.</p>
                                 </div>
                             </div>
                             <div class="col-md-4 text-center">
                                 <div class="icon-item">
+                                        <div class="circle-border mx-auto">
                                     <img src="img/icons/ejca.png" alt="">
+                                    </div>
                                     <p> Ejercicios con casuísticas reales.</p>
                                 </div>
                             </div>
 
                         </div>
-                        <div class="row">
+                        <div class="row mt-md-4 mt-4">
                                 <div class="col-md-4 text-center">
                                     <div class="icon-item">
-                                        <img src="img/icons/mod.png" alt="">
+                                        <div class="circle-border mx-auto">
+                                            <img src="img/icons/mod.png" alt="">
+                                        </div>
                                         <p> Modalidad Presencial y Virtual</p>
                                     </div>
                                 </div>    
                                 <div class="col-md-4 text-center">
                                     <div class="icon-item">
-                                        <img src="img/icons/consap.png" alt="">
+                                        <div class="circle-border mx-auto">
+                                            <img src="img/icons/consap.png" alt="">
+                                            </div>
                                         <p> Consultores SAP Certificados con más de 10 años de experiencia.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-4 text-center">
                                     <div class="icon-item">
+                                            <div class="circle-border mx-auto">
                                         <img src="img/icons/certires.png" alt="">
+                                        </div>
                                         <p> Certificación con respaldo de la Cámara de Comercio de Lima.</p>
                                     </div>
                                 </div>        
@@ -387,7 +416,7 @@
                             <p>Calle Rivera Navarrete 451. San Isidro</p>
                             <p class="btn-entrar">
                                     <span>
-                                        <a href="#">Recibir información de cursos</a>
+                                        <a class="saltar" href="#">Recibir información de cursos</a>
                                     </span>
                                 </p>
                         </div>
