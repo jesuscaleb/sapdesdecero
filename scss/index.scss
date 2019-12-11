@@ -9,7 +9,7 @@ $hd-green: rgb(0, 102, 51);
 $hd-white: #FFFFFF;
 $hd-gray: rgb(102,102,102);
 $hd-yellow: rgb(255,255,0);
-
+$hd-light: rgb(237, 237, 237);
 
 /* Colors with opacity */
 $rgba-black: rgba(0, 0, 0,0.80);
@@ -79,6 +79,11 @@ img{
   max-height: auto;
 }
 
+.footer-icon{
+  width: 5%;
+  height: auto;
+}
+
 /* Background images for Carrousel*/
 
 .bkimg1{
@@ -120,6 +125,10 @@ img{
 
 .bklyr-color3{
   background-color: $rgba-lgtblue;
+}
+
+.bklyr-color4{
+  background-color: $rgba-blue;
 }
 
 /* Body Head Content */
@@ -167,7 +176,7 @@ img{
 
 .curso-banner {
   padding: 50px;
-  background-color: $rgba-blue;
+  
 
   img{
     max-width: 150px;
@@ -175,7 +184,7 @@ img{
     padding-bottom: 10px;
 
   }
-  h2{
+  h1{
     color: $hd-white;
     font-family: Gothan;
     font-weight: bold;
@@ -517,10 +526,261 @@ img{
 }
 
 .circle{
-  width: 60px;
-  height: 60px;
-  background: $hd-purple; 
+  width: 100px;
+  height: 100px;
+  background: $hd-purple;
   -moz-border-radius: 70px; 
   -webkit-border-radius: 70px; 
   border-radius: 70px;
+  img{
+    padding:20px;
+  }
+}
+
+.obj-title{
+  h1{
+    font-family: Gothan;
+    font-weight: bold;
+    color: $hd-gray;
+    border-bottom: 5px $hd-green solid;
+  }
+}
+
+.obj-list{
+
+
+   /* Custom HTML bullets */
+   ul {
+    list-style: none; /* Remove HTML bullets */
+    padding: 0;
+    margin: 0;
+  }
+  
+  li { 
+    padding-left: 16px; 
+    text-align: left;
+    font-family: Gothan Book;
+    font-weight: bold;
+    font-size: 17px;
+    color: $hd-gray;
+    padding-top:25px;
+  }
+  
+  li::before {
+    content: "-"; /* Insert content that looks like bullets */
+    padding-right: 1px;
+    color: $hd-gray; /* Or a color you prefer */
+  }
+}
+
+.bg-obj{
+  background-color: $hd-light;
+  padding: 40px;
+}
+.obj-btn{
+  
+  p{
+    a{
+      background-color: $hd-green;
+      text-decoration: none;
+      color: $hd-white;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 25px;
+      padding-right: 25px;
+      font-family: Gothan Book;
+      font-size: 25px;
+    } 
+  }
+}
+
+.bg-temario{
+  background-color: $hd-purple;
+  color: $hd-white;
+  padding:40px;
+}
+
+.tem-title{
+  h1{
+    font-family: Gothan;
+    font-weight: bold;
+    border-bottom: 5px $hd-green solid;
+  }
+}
+
+.tem-sub{
+  padding-top: 20px;
+  p{
+    font-family: Gothan Book;
+    font-weight: bold;
+    padding-left: 19px;
+    
+    font-size: 17px;
+    margin-bottom: 0px;
+  }
+}
+.tem-list{
+  /* Custom HTML bullets */
+  ul {
+   list-style: none; /* Remove HTML bullets */
+   padding: 0;
+   margin: 0;
+ }
+ 
+ li { 
+   padding-left: 16px; 
+   text-align: left;
+   font-family: Gothan Book;
+   font-weight: bold;
+   font-size: 17px;
+   color: $hd-white;
+   padding-top:25px;
+ }
+ 
+ li::before {
+   content: "-"; /* Insert content that looks like bullets */
+   padding-right: 1px;
+   color: $hd-white; /* Or a color you prefer */
+ }
+}
+
+.tem-btn{
+  padding-top: 50px;
+  p{
+    padding-top: 20px;
+    a{
+      background-color: $hd-green;
+      text-decoration: none;
+      color: $hd-white;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 25px;
+      padding-right: 25px;
+      font-family: Gothan Book;
+      font-size: 25px;
+    } 
+  }
+}
+
+.col-tem{
+  padding-top: 80px;
+  padding-bottom: 80px;
+  /* Custom HTML bullets */
+  ul {
+    list-style: none; /* Remove HTML bullets */
+    padding: 0;
+    margin: 0;
+  }
+  
+  li { 
+    padding-left: 16px; 
+    text-align: left;
+    font-family: Gothan Book;
+    font-weight: bold;
+    font-size: 17px;
+    color: $hd-gray;
+    padding-top:15px;
+  }
+  
+  li::before {
+    content: "-"; /* Insert content that looks like bullets */
+    padding-right: 1px;
+    color: $hd-gray; /* Or a color you prefer */
+  }
+  img{
+    width: 45%;
+    height: auto;
+  }
+}
+
+/* ADMISION */
+
+.ins-title{
+  padding:20px;
+  h1{
+    text-align: center;
+    font-family: Gothan;
+    font-weight: bold;
+    color: $hd-green;
+  }
+
+}
+
+.ins-item{
+  text-align: center;
+  padding:40px;
+
+  
+  h1{
+    font-family: Gothan;
+    padding-top: 20px;
+    font-weight: bold;
+    color: $hd-gray;
+  }
+
+  p{
+    font-family: Gothan Book;
+    font-weight: bold;
+    color: $hd-gray;
+    padding-top: 10px;
+  }
+}
+
+/* Modal */
+
+.modal.fade .modal-dialog.modal-dialog-zoom {
+  -webkit-transform: translate(0,0)scale(.5);
+  transform: translate(0,0)scale(.5);
+}
+.modal.show .modal-dialog.modal-dialog-zoom {
+  -webkit-transform: translate(0,0)scale(1);
+  transform: translate(0,0)scale(1);
+}
+
+.modal-content  {
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+  
+  -webkit-border-radius: 0px !important;
+  -moz-border-radius: 0px !important;
+  border-radius: 0px !important; 
+}
+
+.bg-sap{
+  background-color: $hd-purple;
+  height: 600px;
+  img{
+    padding-top: 150px;
+    padding-bottom: 150px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+.modal-row{
+  padding:0px;
+}
+
+.sap-content{
+  padding-top: 70px;
+  text-align: center;
+  h5{
+    font-family: Gothan;
+    font-weight: bold;
+    color: $hd-green;
+  }
+
+  p{
+    padding-top: 30px;
+    font-family: Gothan Book;
+    font-weight: bold;
+    color: $hd-gray;
+  }
+}
+
+.sap-item{
+  img{
+    width: 80px;
+    height: auto;
+    /*box-shadow: 7px 7px 7px 7px;*/
+  }
 }

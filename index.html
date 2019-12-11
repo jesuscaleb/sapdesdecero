@@ -6,46 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/index.css">
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
-    <title>Sap desde Cero</title>
+    <title>Sap desde Cero | Inicio</title>
 </head>
-<body class="d-flex flex-column jumphere">
+<body class="d-flex flex-column" id="jumphere">
     <!-- Header -->
     <section id="ITSYSTEMS-HEADER" >
-        <nav class="navbar fixed-top  navbar-expand-lg navbar-custom ">
-            <div class="container">
-                <a class="navbar-brand mr-auto" href="../index.html">
-                    <img class="logo" src="img/logos/sap.png" alt="">
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-        
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto topnav">
-                        <li class="nav-item active">
-                            <a class="navbar-item" href="../index.html"><span>INICIO</span></a>
-                        </li>
-                        <li class="dropdown">
-                            <a class="navbar-item dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span>CURSOS</span>
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="../sapb1.html">SAP Business One</a>
-                                <a class="dropdown-item" href="../sapmm.html">SAP Gestión Logística y Almacén</a>
-                                <a class="dropdown-item" href="../sapf1.html">SAP Contabilidad y Finanzas</a>
-                            </div>
-                        </li>
-                        <li>
-                            <a  class="navbar-item" href="../admision.html"><span>ADMISIÓN</span></a>
-                        </li>
-                        <li>
-                            <a  class="navbar-item" href="#"><span>CONTÁCTENOS</span></a>
-                        </li>
-                        
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <div class="header-section"></div>
     </section>
     <!-- Body -->
     <section id="ITSYSTEMS-BODY">
@@ -71,7 +37,7 @@
                                         <p class="sub">Administración con SAP Business One</p>
                                         <p class="btn-entrar">
                                             <span>
-                                                <a href="#">Entrar</a>
+                                                <a href="sapb1.html">Entrar</a>
                                             </span>
                                         </p>
                                     </div>
@@ -80,7 +46,7 @@
                                         <p class="sub">Gestión Logística y Almacén</p>
                                         <p class="btn-entrar">
                                                 <span>
-                                                    <a href="#">Entrar</a>
+                                                    <a href="sapmm.html">Entrar</a>
                                                 </span>
                                             </p>
                                     </div>
@@ -89,7 +55,7 @@
                                         <p class="sub">Gestión Contabilidad y Finanzas</p>
                                         <p class="btn-entrar">
                                             <span>
-                                                <a href="#">Entrar</a>
+                                                <a href="sapfi.html">Entrar</a>
                                             </span>
                                         </p>
                                     </div>
@@ -103,7 +69,7 @@
                                     <p>Recibe información al instante sobre el curso de tu interés.</p>
                                 </div>
                                 <div class="frm-body">
-                                    <!-- TODO: Realizar un boton en posicion fixed en miniatura para saltar al formulario-->
+                                    
                                     <form name="reg-form" id="reg-form">
                                             <div class="form-group">
                                                 <input class="form-control form-control-sm" name="txtnom" type="text" placeholder="Nombres completos">
@@ -397,49 +363,7 @@
         </div>
     </section>
     <section id="ITSYSTEMS-FOOTER">
-        <!-- Footer -->
-        <footer id="sticky-footer" >
-            <div class="bg-footer1">
-                <div class="container">
-                    <div class="row footer-row">
-                        <div class="col-md-4">
-                            <h5>ENLACES DESTACADOS</h5>
-                            <p>Inicio</p>
-                            <p>Cursos</p>
-                            <p>Admisión</p>
-                            <p>Contáctanos</p>
-                        </div>
-                        <div class="col-md-4">
-                            <h5>CONTACTO</h5>
-                            <p>+51 954101100 / (01) 6575073</p>
-                            <p>info.sapdesdecero@gmail.com</p>
-                            <p>Calle Rivera Navarrete 451. San Isidro</p>
-                            <p class="btn-entrar">
-                                    <span>
-                                        <a class="saltar" href="#">Recibir información de cursos</a>
-                                    </span>
-                                </p>
-                        </div>
-                        <!--TODO: Conseguir iconos de las redes sociales-->
-                        <div class="col-md-4">
-                            <h5>NUESTRAS REDES:</h5>
-                            <p>
-                                <icon>Facebook</icon>&nbsp;/SAP Desde Cero
-                            </p> 
-                            <p>
-                                <icon>Instagram</icon>&nbsp;/SAP Desde Cero
-                            </p>
-                            <p>
-                                <icon>LinkedIn</icon>&nbsp;/SAP Desde Cero
-                            </p>    
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container-fluid bg-footer2 text-center text-white">
-                <small>2019 Copyright &copy; SAP DESDE CERO</small>
-            </div>
-        </footer>
+        <div class="footer-section"></div>
     </section>
 
     <!-- Optional JavaScript -->

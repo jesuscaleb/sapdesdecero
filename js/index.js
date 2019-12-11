@@ -3,10 +3,27 @@ $.validator.addMethod("valueNotEquals", function(value, element, arg){
     return arg != value;
    }, "Value must not equal arg.");
 
+// This is a functions that scrolls to #{blah}link
+function goToByScroll() {
+    
+    $('html,body').animate({
+        scrollTop: $("#jumphere").offset().top
+    }, 'slow');
+}
+
+$(document).on('click', '#saltar', function (e) {
+    e.preventDefault();
+    // Call the scroll function
+    goToByScroll();
+});
+
 // Registration Form Validation
 $(document).ready(function(){
 
+        $('.header-section').load('../sections/header.html');
+        $('.footer-section').load('../sections/footer.html');
 
+        
 
         $('#reg-form').validate({
             rules:{
@@ -145,18 +162,3 @@ $(document).ready(function(){
     });
 });
 
-function goToByScroll() {
-    // Remove "link" from the ID
-    // id = id.replace("link", "");
-    // Scroll
-    $('html,body').animate({
-        scrollTop: $(".jumphere").offset().top
-    }, 'slow');
-}
-
-$(".saltar").click(function(e) {
-    // Prevent a page reload when a link is pressed
-    e.preventDefault();
-    // Call the scroll function
-    goToByScroll();
-});

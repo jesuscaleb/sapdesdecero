@@ -8746,10 +8746,6 @@ img {
   max-width: 50%;
   max-height: auto; }
 
-.footer-icon {
-  width: 5%;
-  height: auto; }
-
 /* Background images for Carrousel*/
 .bkimg1 {
   background-image: url("../img/SAPBUSINESSONE.png"); }
@@ -8818,12 +8814,13 @@ img {
       font-family: Gothan Book; }
 
 .curso-banner {
-  padding: 50px; }
+  padding: 50px;
+  background-color: rgba(48, 61, 136, 0.85); }
   .curso-banner img {
     max-width: 150px;
     max-height: auto;
     padding-bottom: 10px; }
-  .curso-banner h1 {
+  .curso-banner h2 {
     color: #FFFFFF;
     font-family: Gothan;
     font-weight: bold;
@@ -9075,208 +9072,11 @@ img {
     padding-left: 3px; }
 
 .circle {
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
   background: #33064a;
   -moz-border-radius: 70px;
   -webkit-border-radius: 70px;
   border-radius: 70px; }
-  .circle img {
-    padding: 20px; }
 
-.obj-title h1 {
-  font-family: Gothan;
-  font-weight: bold;
-  color: #666666;
-  border-bottom: 5px #006633 solid; }
-
-.obj-list {
-  /* Custom HTML bullets */ }
-  .obj-list ul {
-    list-style: none;
-    /* Remove HTML bullets */
-    padding: 0;
-    margin: 0; }
-  .obj-list li {
-    padding-left: 16px;
-    text-align: left;
-    font-family: Gothan Book;
-    font-weight: bold;
-    font-size: 17px;
-    color: #666666;
-    padding-top: 25px; }
-  .obj-list li::before {
-    content: "-";
-    /* Insert content that looks like bullets */
-    padding-right: 1px;
-    color: #666666;
-    /* Or a color you prefer */ }
-
-.bg-obj {
-  background-color: #ededed;
-  padding: 40px; }
-
-.obj-btn p a {
-  background-color: #006633;
-  text-decoration: none;
-  color: #FFFFFF;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 25px;
-  padding-right: 25px;
-  font-family: Gothan Book;
-  font-size: 25px; }
-
-.bg-temario {
-  background-color: #33064a;
-  color: #FFFFFF;
-  padding: 40px; }
-
-.tem-title h1 {
-  font-family: Gothan;
-  font-weight: bold;
-  border-bottom: 5px #006633 solid; }
-
-.tem-sub {
-  padding-top: 20px; }
-  .tem-sub p {
-    font-family: Gothan Book;
-    font-weight: bold;
-    padding-left: 19px;
-    font-size: 17px;
-    margin-bottom: 0px; }
-
-.tem-list {
-  /* Custom HTML bullets */ }
-  .tem-list ul {
-    list-style: none;
-    /* Remove HTML bullets */
-    padding: 0;
-    margin: 0; }
-  .tem-list li {
-    padding-left: 16px;
-    text-align: left;
-    font-family: Gothan Book;
-    font-weight: bold;
-    font-size: 17px;
-    color: #FFFFFF;
-    padding-top: 25px; }
-  .tem-list li::before {
-    content: "-";
-    /* Insert content that looks like bullets */
-    padding-right: 1px;
-    color: #FFFFFF;
-    /* Or a color you prefer */ }
-
-.tem-btn {
-  padding-top: 50px; }
-  .tem-btn p {
-    padding-top: 20px; }
-    .tem-btn p a {
-      background-color: #006633;
-      text-decoration: none;
-      color: #FFFFFF;
-      padding-top: 10px;
-      padding-bottom: 10px;
-      padding-left: 25px;
-      padding-right: 25px;
-      font-family: Gothan Book;
-      font-size: 25px; }
-
-.col-tem {
-  padding-top: 80px;
-  padding-bottom: 80px;
-  /* Custom HTML bullets */ }
-  .col-tem ul {
-    list-style: none;
-    /* Remove HTML bullets */
-    padding: 0;
-    margin: 0; }
-  .col-tem li {
-    padding-left: 16px;
-    text-align: left;
-    font-family: Gothan Book;
-    font-weight: bold;
-    font-size: 17px;
-    color: #666666;
-    padding-top: 15px; }
-  .col-tem li::before {
-    content: "-";
-    /* Insert content that looks like bullets */
-    padding-right: 1px;
-    color: #666666;
-    /* Or a color you prefer */ }
-  .col-tem img {
-    width: 45%;
-    height: auto; }
-
-/* ADMISION */
-.ins-title {
-  padding: 20px; }
-  .ins-title h1 {
-    text-align: center;
-    font-family: Gothan;
-    font-weight: bold;
-    color: #006633; }
-
-.ins-item {
-  text-align: center;
-  padding: 40px; }
-  .ins-item h1 {
-    font-family: Gothan;
-    padding-top: 20px;
-    font-weight: bold;
-    color: #666666; }
-  .ins-item p {
-    font-family: Gothan Book;
-    font-weight: bold;
-    color: #666666;
-    padding-top: 10px; }
-
-/* Modal */
-.modal.fade .modal-dialog.modal-dialog-zoom {
-  -webkit-transform: translate(0, 0) scale(0.5);
-  transform: translate(0, 0) scale(0.5); }
-
-.modal.show .modal-dialog.modal-dialog-zoom {
-  -webkit-transform: translate(0, 0) scale(1);
-  transform: translate(0, 0) scale(1); }
-
-.modal-content {
-  max-height: calc(100vh - 200px);
-  overflow-y: auto;
-  -webkit-border-radius: 0px !important;
-  -moz-border-radius: 0px !important;
-  border-radius: 0px !important; }
-
-.bg-sap {
-  background-color: #33064a;
-  height: 600px; }
-  .bg-sap img {
-    padding-top: 150px;
-    padding-bottom: 150px;
-    padding-left: 60px;
-    padding-right: 60px; }
-
-.modal-row {
-  padding: 0px; }
-
-.sap-content {
-  padding-top: 70px;
-  text-align: center; }
-  .sap-content h5 {
-    font-family: Gothan;
-    font-weight: bold;
-    color: #006633; }
-  .sap-content p {
-    padding-top: 30px;
-    font-family: Gothan Book;
-    font-weight: bold;
-    color: #666666; }
-
-.sap-item img {
-  width: 80px;
-  height: auto;
-  /*box-shadow: 7px 7px 7px 7px;*/ }
-
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=index.scss.map */
