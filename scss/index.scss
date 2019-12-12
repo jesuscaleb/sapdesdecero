@@ -56,6 +56,13 @@ body {
 
 .dropdown-menu{
   border-radius: 0px;
+  .dropdown-item{
+    font-family: Gothan Book;
+    font-weight: bold;
+    color: $hd-gray;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
 }
 
 .navbar-custom {
@@ -66,6 +73,15 @@ body {
 /* Footer */
 #sticky-footer {
   flex-shrink: 0;
+}
+
+.enlaces{
+  p{
+    a{
+      text-decoration: none;
+      color: $hd-white;
+    }
+  }
 }
 
 /* Custom image size */
@@ -100,7 +116,7 @@ img{
 
 .bkimg-det{
   background-size:     cover;                   
-  background-repeat:   no-repeat;
+  background-repeat:   repeat;
   background-position: center;    
   height: 440px;
   width: 1580px;
@@ -148,6 +164,8 @@ img{
     font-weight: bold;
   }
 
+  
+
   .sub{
     color: $hd-white;
     text-align: center;
@@ -159,9 +177,10 @@ img{
     text-align: center;
     span{
       background-color: $hd-green;
-      padding-left: 6px;
-      padding-right: 6px;
-      padding-bottom: 2px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 5px;
+      padding-top: 5px;
     }
     a{
       text-decoration: none;
@@ -222,8 +241,8 @@ img{
     padding-right: 5px;
   }
 
-  input, select{
-    border-radius: 0px;
+  input,select{
+    border-radius: 5px;
   }
 
   label{
@@ -238,6 +257,10 @@ img{
     border-color: $hd-green;
     background-color: $hd-green;
     font-family: Gothan Book;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
   }
 
   .error{
@@ -330,8 +353,8 @@ img{
       margin-left: 10px;
       padding-right: 15px;
       padding-left: 15px;
-      padding-top: 2px;
-      padding-bottom: 2px;
+      padding-top: 7px;
+      padding-bottom: 7px;
     }
   }
 
@@ -389,7 +412,7 @@ img{
 .reg-form2{
   padding:30px;
   input,select{
-    border-radius: 0px;
+    border-radius: 5px;
   }
   label{
     
@@ -406,8 +429,10 @@ img{
     border-color: $hd-purple;
     background-color: $hd-purple;
     font-family: Gothan Book;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 
   .error{
@@ -465,7 +490,7 @@ img{
   padding-top: 80px;
   padding-bottom: 80px;
   img{
-    width: 75%;
+    width: 70%;
     height: auto;
   }
 }
@@ -496,10 +521,11 @@ img{
   }
 
   .btn-entrar{
-    
+    padding-top:10px;
     span{
       background-color: $hd-green;
-      padding: 7px;
+      padding: 15px;
+      
     }
     a{
       text-decoration: none;
@@ -726,6 +752,11 @@ img{
   }
 }
 
+.bbva{
+  width: 80%;
+  height: auto;
+}
+
 /* Modal */
 
 .modal.fade .modal-dialog.modal-dialog-zoom {
@@ -738,8 +769,8 @@ img{
 }
 
 .modal-content  {
-  max-height: calc(100vh - 200px);
-  overflow-y: auto;
+  /*max-height: calc(100vh - 200px);
+  overflow-y: auto;*/
   
   -webkit-border-radius: 0px !important;
   -moz-border-radius: 0px !important;
@@ -761,7 +792,7 @@ img{
 }
 
 .sap-content{
-  padding-top: 70px;
+  padding-top: 120px;
   text-align: center;
   h5{
     font-family: Gothan;
@@ -770,7 +801,7 @@ img{
   }
 
   p{
-    padding-top: 30px;
+    padding-top: 40px;
     font-family: Gothan Book;
     font-weight: bold;
     color: $hd-gray;
@@ -778,9 +809,14 @@ img{
 }
 
 .sap-item{
+  padding-top: 70px;
   img{
     width: 80px;
     height: auto;
     /*box-shadow: 7px 7px 7px 7px;*/
   }
+}
+/* TODO: Quitar el visibility hidden cuando se llegue a un acuerdo con la maqueta*/
+.mensaje {
+  visibility: hidden;
 }

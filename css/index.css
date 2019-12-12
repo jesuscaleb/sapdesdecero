@@ -3389,6 +3389,9 @@ input[type="button"].btn-block {
   border-color: rgba(0, 0, 0, 0.1); }
 .navbar-light .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); }
+  .custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(51, 6, 74)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  }
 .navbar-light .navbar-text {
   color: rgba(0, 0, 0, 0.5); }
   .navbar-light .navbar-text a {
@@ -8729,6 +8732,12 @@ body {
 
 .dropdown-menu {
   border-radius: 0px; }
+  .dropdown-menu .dropdown-item {
+    font-family: Gothan Book;
+    font-weight: bold;
+    color: #666666;
+    padding-top: 15px;
+    padding-bottom: 15px; }
 
 .navbar-custom {
   background-color: #FFFFFF; }
@@ -8736,6 +8745,10 @@ body {
 /* Footer */
 #sticky-footer {
   flex-shrink: 0; }
+
+.enlaces p a {
+  text-decoration: none;
+  color: #FFFFFF; }
 
 /* Custom image size */
 img {
@@ -8762,7 +8775,7 @@ img {
 
 .bkimg-det {
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-position: center;
   height: 440px;
   width: 1580px;
@@ -8808,9 +8821,10 @@ img {
     text-align: center; }
     .home-banner .btn-entrar span {
       background-color: #006633;
-      padding-left: 6px;
-      padding-right: 6px;
-      padding-bottom: 2px; }
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 5px;
+      padding-top: 5px; }
     .home-banner .btn-entrar a {
       text-decoration: none;
       color: #FFFFFF;
@@ -8854,7 +8868,7 @@ img {
     padding-left: 5px;
     padding-right: 5px; }
   .frm-container input, .frm-container select {
-    border-radius: 0px; }
+    border-radius: 5px; }
   .frm-container label {
     font-size: 13px;
     color: #FFFFFF;
@@ -8864,7 +8878,11 @@ img {
     /* TODO: Aplicar el formato de color apropiado para el bot├│n Enviar*/
     border-color: #006633;
     background-color: #006633;
-    font-family: Gothan Book; }
+    font-family: Gothan Book;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px; }
   .frm-container .error {
     color: #e94a48;
     font-size: 13px; }
@@ -8935,8 +8953,8 @@ img {
       margin-left: 10px;
       padding-right: 15px;
       padding-left: 15px;
-      padding-top: 2px;
-      padding-bottom: 2px; }
+      padding-top: 7px;
+      padding-bottom: 7px; }
   .card-foot .green-ray {
     border: 1px #006633 solid; }
 
@@ -8974,7 +8992,7 @@ img {
 .reg-form2 {
   padding: 30px; }
   .reg-form2 input, .reg-form2 select {
-    border-radius: 0px; }
+    border-radius: 5px; }
   .reg-form2 label {
     color: #FFFFFF;
     font-family: Gothan Book; }
@@ -8987,8 +9005,10 @@ img {
     border-color: #33064a;
     background-color: #33064a;
     font-family: Gothan Book;
-    padding-left: 10px;
-    padding-right: 10px; }
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px; }
   .reg-form2 .error {
     color: #e94a48;
     font-size: 13px; }
@@ -9031,7 +9051,7 @@ img {
   padding-top: 80px;
   padding-bottom: 80px; }
   .col-backup img {
-    width: 75%;
+    width: 70%;
     height: auto; }
 
 /* Footer */
@@ -9054,14 +9074,16 @@ img {
     font-family: Gothan;
     font-weight: bold;
     padding-bottom: 20px; }
-  .footer-row .btn-entrar span {
-    background-color: #006633;
-    padding: 7px; }
-  .footer-row .btn-entrar a {
-    text-decoration: none;
-    color: #FFFFFF;
-    font-size: 14px;
-    font-family: Gothan Book; }
+  .footer-row .btn-entrar {
+    padding-top: 10px; }
+    .footer-row .btn-entrar span {
+      background-color: #006633;
+      padding: 15px; }
+    .footer-row .btn-entrar a {
+      text-decoration: none;
+      color: #FFFFFF;
+      font-size: 14px;
+      font-family: Gothan Book; }
 
 .circle-border {
   width: 100px;
@@ -9233,6 +9255,10 @@ img {
     color: #666666;
     padding-top: 10px; }
 
+.bbva {
+  width: 80%;
+  height: auto; }
+
 /* Modal */
 .modal.fade .modal-dialog.modal-dialog-zoom {
   -webkit-transform: translate(0, 0) scale(0.5);
@@ -9243,8 +9269,8 @@ img {
   transform: translate(0, 0) scale(1); }
 
 .modal-content {
-  max-height: calc(100vh - 200px);
-  overflow-y: auto;
+  /*max-height: calc(100vh - 200px);
+  overflow-y: auto;*/
   -webkit-border-radius: 0px !important;
   -moz-border-radius: 0px !important;
   border-radius: 0px !important; }
@@ -9262,21 +9288,27 @@ img {
   padding: 0px; }
 
 .sap-content {
-  padding-top: 70px;
+  padding-top: 120px;
   text-align: center; }
   .sap-content h5 {
     font-family: Gothan;
     font-weight: bold;
     color: #006633; }
   .sap-content p {
-    padding-top: 30px;
+    padding-top: 40px;
     font-family: Gothan Book;
     font-weight: bold;
     color: #666666; }
 
-.sap-item img {
-  width: 80px;
-  height: auto;
-  /*box-shadow: 7px 7px 7px 7px;*/ }
+.sap-item {
+  padding-top: 70px; }
+  .sap-item img {
+    width: 80px;
+    height: auto;
+    /*box-shadow: 7px 7px 7px 7px;*/ }
+
+/* TODO: Quitar el visibility hidden cuando se llegue a un acuerdo con la maqueta*/
+.mensaje {
+  visibility: hidden; }
 
 /*# sourceMappingURL=index.css.map */
