@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="shortcut icon" href="img/icons/sapdesdecero.ico" type="image/x-icon">
+    <link rel="icon" href="img/icons/sapdesdecero.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
     <title>Sap desde Cero | Inicio</title>
 </head>
@@ -63,17 +65,21 @@
                             </div>
                         </div>
                         <div class="col offset-md-1 col-md-3">
+
                             <div class="frm-container container">
                                 <div class="frm-title">
                                     <h4>REGISTRATE AHORA</h4>
                                     <p>Recibe información al instante sobre el curso de tu interés.</p>
                                 </div>
+                                
                                 <div class="frm-body">
                                     
-                                    <form name="reg-form" id="reg-form">
+                                    <div class="response text-center"></div>
+                                    <form id="reg-form">
+                                            <input type="hidden" name="form" value="1">
                                             <div class="form-group">
+                                                    <input type="hidden" name="form" value="1">
                                                 <input class="form-control form-control-sm" name="txtnom" type="text" placeholder="Nombres completos">
-                                                
                                             </div>
                                             <div class="form-group">
                                                 <input class="form-control form-control-sm" name="txtemail" type="text" placeholder="Correo electronico">
@@ -84,9 +90,9 @@
                                             <div class="form-group">
                                                 <select name="selcur" class="form-control form-control-sm">
                                                         <option value="default">Curso de interés </option>
-                                                    <option value="1">SAP Business One </option>
-                                                    <option value="2">SAP Gestión  Logística y Almacén</option>
-                                                    <option value="3">SAP Contabilidad y Finanzas </option>
+                                                    <option value="SAP Business One">SAP Business One </option>
+                                                    <option value="SAP Gestion Logistica y Almacen">SAP Gestión  Logística y Almacén</option>
+                                                    <option value="SAP Contabilidad y Finanzas">SAP Contabilidad y Finanzas </option>
                                                 </select>
                                             </div>
                                             <div class="form-group">
@@ -235,9 +241,11 @@
                                 </div>
                             </div>
                             <div class="col-md-8">
+                                <div class="response text-center"></div>
                                 <form class="reg-form2" id="reg-form2">
                                     <div class="form-row">
                                         <div class="col">
+                                            <input type="hidden" name="form2" value="2">
                                             <input class="form-control form-control-sm" name="txtnom2" type="text" placeholder="Nombres completos">
                                         </div>
                                         <div class="col">
@@ -251,17 +259,17 @@
                                         <div class="col">
                                             <select name="selcur2" class="form-control form-control-sm">
                                                     <option value="default">Curso de interés </option>
-                                                    <option value="1">SAP Business One </option>
-                                                    <option value="2">SAP Gestión  Logística y Almacén</option>
-                                                    <option value="3">SAP Contabilidad y Finanzas </option>
+                                                    <option value="Sap Business One">SAP Business One </option>
+                                                    <option value="Sap Gestion Logistica y Almacen">SAP Gestión  Logística y Almacén</option>
+                                                    <option value="SAP Contabilidad y Finanzas">SAP Contabilidad y Finanzas </option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="form-row">
                                         <div class="col-6">
                                             <div class="custom-control custom-checkbox mr-sm-2">
-                                                <input type="checkbox" class="custom-control-input" name="chkpol2" id="customControlAutosizing">
-                                                <label  class="custom-control-label" for="customControlAutosizing">Acepto las <a href="#">politicas de privacidad</a></label>
+                                                <input type="checkbox" class="custom-control-input" name="chkpol2" id="customControlAutosizing2">
+                                                <label  class="custom-control-label" for="customControlAutosizing2">Acepto las <a href="#">politicas de privacidad</a></label>
                                             </div>
                                         </div>
                                     </div>

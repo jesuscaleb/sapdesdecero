@@ -12,6 +12,7 @@ function goToByScroll() {
 }
 
 $(document).on('click', '#saltar', function (e) {
+
     e.preventDefault();
     // Call the scroll function
     goToByScroll();
@@ -20,12 +21,10 @@ $(document).on('click', '#saltar', function (e) {
 // Registration Form Validation
 $(document).ready(function(){
 
-        $('.header-section').load('../sections/header.html');
-        $('.footer-section').load('../sections/footer.html');
+        $('.header-section').load('./sections/header.html');
+        $('.footer-section').load('./sections/footer.html');
 
-        
-
-        $('#reg-form').validate({
+        var validator = $('#reg-form').validate({
             rules:{
             txtnom:{
                 required:true
@@ -64,7 +63,6 @@ $(document).ready(function(){
                 required: "Este campo es obligatorio"
             }
         },
-        
         errorPlacement: function( label, element ) {
             if( element.attr( "name" ) === "audience[]" || element.attr( "name" ) === "event_services[]" ) {
                 element.parent().append( label ); // this would append the label after all your checkboxes/labels (so the error-label will be the last element in <div class="controls"> )
@@ -75,25 +73,34 @@ $(document).ready(function(){
         ,
         submitHandler: function(form) {
             //TODO: Realizar una alerta o mensaje para mostrar al completar correctament el formulario
-            form.preventDefault();
-            alert('Enviado');
-            /*
+            //$(form).preventDefault();
+            // alert('enviado');
             $.ajax({
-                url: form.action,
-                type: form.method,
+                url: './data/submit.php',
+                type: 'POST',
+                
                 data: $(form).serialize(),
-                success: function(response) {
-                    // $('#answers').html(response);
-                    console.log(response);
-                    validator.resetForm();
-                    
+                success: function(data) {
+                    // $('#answers').html(data);
+                    // var data = jQuery.parseJSON(data); Si php retorna un array string por json_encode
+                    console.log(data);
+                        
+                    $('#reg-form').remove();
+                    $('#reg-form2').remove();
+                    $('.response').append("<img class='mx-auto' src='img/icons/disp.png'>");
+                    $('.response').append("<h3 class='mx-auto text-center'>Registro correcto</h3>");
+                    // Clear the form
+					validator.resetForm();
+                },
+                error: function (e) {
+                    console.log(e);
                 }            
-            });*/
-            
+            });
+            return false;
         }
     });
 
-    $('#reg-form2').validate({
+    var validator2 =  $('#reg-form2').validate({
         rules:{
         txtnom2:{
             required:true
@@ -132,7 +139,6 @@ $(document).ready(function(){
             required: "Este campo es obligatorio"
         }
     },
-
     errorPlacement: function( label, element ) {
         if( element.attr( "name" ) === "audience[]" || element.attr( "name" ) === "event_services[]" ) {
             element.parent().append( label ); // this would append the label after all your checkboxes/labels (so the error-label will be the last element in <div class="controls"> )
@@ -143,22 +149,28 @@ $(document).ready(function(){
     ,
     submitHandler: function(form) {
         //TODO: Realizar una alerta o mensaje para mostrar al completar correctament el formulario
-        form.preventDefault();
-        alert('Enviado');
-        /*
+        //$(form).preventDefault();
+        // alert('enviado');
         $.ajax({
-            url: form.action,
-            type: form.method,
+            url: './data/submit.php',
+            type: 'POST',
+            
             data: $(form).serialize(),
-            success: function(response) {
-                // $('#answers').html(response);
-                console.log(response);
-                validator.resetForm();
+            success: function(data) {
+                // $('#answers').html(data);
+                // var data = jQuery.parseJSON(data); Si php retorna un array string por json_encode
+                console.log(data);
                 
+                // Clear the form
+                validator2.resetForm();
+                
+            },
+            error: function (e) {
+                console.log(e);
             }            
-        });*/
-        
+        });
+        return false;
     }
-    });
+});
 });
 

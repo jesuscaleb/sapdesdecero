@@ -27,6 +27,7 @@ $bkimg3: '../img/SAPGESTIONDEMATERIALES.png';
 html,
 body {
   height: 100%;
+  
 }
 
 /* Body content */
@@ -37,6 +38,11 @@ body {
 #page-content {
   flex: 1 0 auto;
   margin-top: 8%;
+  
+}
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(51, 6, 74)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
 /* Navbar */
@@ -104,24 +110,24 @@ img{
 
 .bkimg1{
   background-image: url($bkimg1);
+  background-size:     cover; 
 }
 
 .bkimg2{
   background-image: url($bkimg2);
+  background-size:     cover; 
 }
 
 .bkimg3{
   background-image: url($bkimg3);
+  background-size:     cover; 
 }
 
-.bkimg-det{
-  background-size:     cover;                   
-  background-repeat:   repeat;
+.bkimg-det{       
+  background-repeat:   no-repeat;
   background-position: center;    
-  height: 440px;
-  width: 1580px;
-  max-height: 440px;
-  max-width: 1580px;
+  max-height: 1000px;
+  max-width: 2000px;
 }
 
 .bklayer{
@@ -181,6 +187,7 @@ img{
       padding-right: 20px;
       padding-bottom: 5px;
       padding-top: 5px;
+      border-radius: 5px;
     }
     a{
       text-decoration: none;
@@ -252,7 +259,7 @@ img{
   }
 
   .btn-enviar{
-    border-radius: 0px;
+    border-radius: 5px;
     /* TODO: Aplicar el formato de color apropiado para el botón Enviar*/
     border-color: $hd-green;
     background-color: $hd-green;
@@ -355,6 +362,7 @@ img{
       padding-left: 15px;
       padding-top: 7px;
       padding-bottom: 7px;
+      border-radius: 5px;
     }
   }
 
@@ -433,6 +441,7 @@ img{
     padding-right: 25px;
     padding-top: 10px;
     padding-bottom: 10px;
+    border-radius: 5px;
   }
 
   .error{
@@ -525,7 +534,7 @@ img{
     span{
       background-color: $hd-green;
       padding: 15px;
-      
+      border-radius: 5px;
     }
     a{
       text-decoration: none;
@@ -819,4 +828,22 @@ img{
 /* TODO: Quitar el visibility hidden cuando se llegue a un acuerdo con la maqueta*/
 .mensaje {
   visibility: hidden;
+}
+
+.response{
+  text-align: center;
+  
+  img{
+    padding-top: 40px;
+    width: 25%;
+    height: auto;
+  }
+  h3{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    color: $hd-white;
+    font-family: Gothan Book;
+    font-weight: bold;
+    
+  }
 }
