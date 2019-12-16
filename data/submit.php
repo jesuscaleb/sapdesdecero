@@ -16,7 +16,7 @@
             $telefono = filter_var(trim($_POST["txtcel2"]), FILTER_SANITIZE_NUMBER_INT);
         }
         $id_origen = 1;
-        $creado = $fecha_origen = date("d-m-Y");
+        $creado = $fecha_origen = date("Y-m-d"); // La base de datos pide obligatoriamente este formato de fecha
         $empresa_usa_sap = '-';
         $medio_contacto = 'PW';
         $estado = 1;
@@ -28,9 +28,10 @@
         $nombre_empresa = '';
         $nro_documento = '';
         $ruc_empresa = '';
+        $data[] = array();
  
         try {
-			$myPDO = new PDO('pgsql:host= {host};dbname={dbname}', '{user}', '{password}');
+			$myPDO = new PDO('pgsql:host=165.227.49.127;dbname=crm', 'crm_zapier', '54p13r-440');
 
 			if($myPDO) {
 				$query = "INSERT INTO crm.interesado(id_origen, creado,
@@ -41,12 +42,17 @@
                   ".$urgente.", '".$nro_documento."', '".$ruc_empresa."');";
 				$result = $myPDO->exec( $query );
 				if( ! $result ) {
-                    print_r($myPDO->errorInfo()); die; // mal query 
+                    // print_r($myPDO->errorInfo()); die; // mal query 
                     $mensaje = 'Hubo un problema con el envio, por favor inténtelo más tarde. ';
-                    echo $mensaje.'-'.$_P;
+                    $estado = 'error';
+                    $data[] = ['mensaje' => $mensaje, 'estado' => $estado, 'info' => $myPDO->errorInfo()];
+
+                    echo json_encode($data);
                 }else{
                     $mensaje = 'El mensaje se envió correctamente';
-                    echo $mensaje;
+                    $estado = 'exito';
+                    $data[] = ['mensaje' => $mensaje, 'estado' => $estado, 'info' => ''];
+                    echo json_encode($data);
                 }
 			}
 		} catch (PDOException $e){
@@ -55,12 +61,16 @@
             $e->getMessage(); die; 
             
             $mensaje = 'Hubo un problema con el envio, por favor intentelo más tarde.';
-            echo $mensaje;  // no conexion a la bd
+            $estado = 'error';
+            $data[] = ['mensaje' => $mensaje, 'estado' => $estado, 'info' => $e->getMessage()];
+            echo json_encode($data);  // no conexion a la bd
 		}
     } else {
         http_response_code(403);
-        $mensaje = "Hubo un problema con el envio, por favor intentelo de nuevo.";
-        echo $mensaje;
+        $mensaje = 'Hubo un problema con el envio, por favor intentelo más tarde.';
+        $estado = 'error';
+        $data[] = ['mensaje' => $mensaje, 'estado' => $estado, 'info' => 'Error 403'];
+        echo json_encode($data);
     }
 
 ?>

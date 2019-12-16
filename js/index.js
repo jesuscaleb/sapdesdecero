@@ -82,13 +82,13 @@ $(document).ready(function(){
                 data: $(form).serialize(),
                 success: function(data) {
                     // $('#answers').html(data);
-                    // var data = jQuery.parseJSON(data); Si php retorna un array string por json_encode
+                    var data = jQuery.parseJSON(data);
                     console.log(data);
                         
-                    $('#reg-form').remove();
-                    $('#reg-form2').remove();
-                    $('.response').append("<img class='mx-auto' src='img/icons/disp.png'>");
-                    $('.response').append("<h3 class='mx-auto text-center'>Registro correcto</h3>");
+                    //$('#reg-form').remove();
+                    //$('#reg-form2').remove();
+                    //$('.response').append("<img class='mx-auto' src='img/icons/disp.png'>");
+                    //$('.response').append("<h3 class='mx-auto text-center'>"+data+"</h3>");
                     // Clear the form
 					validator.resetForm();
                 },
