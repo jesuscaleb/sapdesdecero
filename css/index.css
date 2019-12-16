@@ -9152,7 +9152,8 @@ img {
   padding-left: 25px;
   padding-right: 25px;
   font-family: Gothan Book;
-  font-size: 25px; }
+  font-size: 25px;
+  border-radius: 5px; }
 
 .bg-temario {
   background-color: #33064a;
@@ -9208,7 +9209,8 @@ img {
       padding-left: 25px;
       padding-right: 25px;
       font-family: Gothan Book;
-      font-size: 25px; }
+      font-size: 25px;
+      border-radius: 5px; }
 
 .col-tem {
   padding-top: 80px;
