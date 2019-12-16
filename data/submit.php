@@ -31,8 +31,8 @@
         
         
         try {
-            $myPDO = new PDO('pgsql:host=165.227.49.127;dbname=crm', 'crm_zapier', '54p13r-440');
-
+			$myPDO = new PDO('pgsql:host= {host};dbname={dbname}', '{user}', '{password}');
+            
 			if($myPDO) {
 				$query = "INSERT INTO crm.interesado(id_origen, creado,
 		        fecha_origen, nombre_completo, telefono, email, ocupacion, nombre_empresa, empresa_usa_sap, medio_contacto, estado, inscrito, curso, modo_insercion, observacion, urgente, nro_documento, ruc_empresa) 
