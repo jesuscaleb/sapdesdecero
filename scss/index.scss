@@ -577,7 +577,7 @@ img{
     font-family: Gothan;
     font-weight: bold;
     color: $hd-gray;
-    border-bottom: 5px $hd-green solid;
+    border-bottom: 3px $hd-green solid;
   }
 }
 
@@ -639,7 +639,7 @@ img{
   h1{
     font-family: Gothan;
     font-weight: bold;
-    border-bottom: 5px $hd-green solid;
+    border-bottom: 3px $hd-green solid;
   }
 }
 
@@ -818,11 +818,15 @@ img{
 }
 
 .sap-item{
-  padding-top: 70px;
+  padding-top: 10px;
   img{
-    width: 80px;
+    width: 70px;
     height: auto;
     /*box-shadow: 7px 7px 7px 7px;*/
+  }
+
+  p{
+    padding-top: 15px;
   }
 }
 /* TODO: Quitar el visibility hidden cuando se llegue a un acuerdo con la maqueta*/
@@ -832,18 +836,28 @@ img{
 
 .response{
   text-align: center;
-  
+  padding-bottom: 15px;
   img{
-    padding-top: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     width: 25%;
     height: auto;
   }
-  h3{
-    padding-top: 40px;
-    padding-bottom: 40px;
+  h4{
+    padding-top: 5px;
+    padding-bottom: 10px;
     color: $hd-white;
     font-family: Gothan Book;
     font-weight: bold;
-    
+  }
+
+  p{
+    text-align: justify;
+    color: $hd-white;
+    font-size: 14px;
+    font-family: Gothan Book;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
   }
 }

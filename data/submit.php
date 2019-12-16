@@ -28,10 +28,10 @@
         $nombre_empresa = '';
         $nro_documento = '';
         $ruc_empresa = '';
-        $data[] = array();
- 
+        
+        
         try {
-			$myPDO = new PDO('pgsql:host=165.227.49.127;dbname=crm', 'crm_zapier', '54p13r-440');
+            $myPDO = new PDO('pgsql:host=165.227.49.127;dbname=crm', 'crm_zapier', '54p13r-440');
 
 			if($myPDO) {
 				$query = "INSERT INTO crm.interesado(id_origen, creado,
@@ -42,19 +42,25 @@
                   ".$urgente.", '".$nro_documento."', '".$ruc_empresa."');";
 				$result = $myPDO->exec( $query );
 				if( ! $result ) {
-                    // print_r($myPDO->errorInfo()); die; // mal query 
+                    // print_r($myPDO->errorInfo()); 
+                    die; // mal query 
                     $mensaje = 'Hubo un problema con el envio, por favor inténtelo más tarde. ';
                     $estado = 'error';
-                    $data[] = ['mensaje' => $mensaje, 'estado' => $estado, 'info' => $myPDO->errorInfo()];
-
-                    echo json_encode($data);
+                    $info = $myPDO->errorInfo();
                 }else{
                     $mensaje = 'El mensaje se envió correctamente';
                     $estado = 'exito';
-                    $data[] = ['mensaje' => $mensaje, 'estado' => $estado, 'info' => ''];
-                    echo json_encode($data);
+                    $info = '';
                 }
-			}
+                $data = ['mensaje' => $mensaje, 'estado' => $estado, 'curso'=> $curso, 'info' => $info];
+                echo json_encode($data);
+			}else{
+                $mensaje = 'No podemos enviar sus datos, por favor inténtelo más tarde. ';
+                $estado = 'error';
+                $info = $myPDO->errorInfo();
+                $data = ['mensaje' => $mensaje, 'estado' => $estado, 'info' => $info];
+                echo json_encode($data);
+            }
 		} catch (PDOException $e){
  			// report error message
  			// print_r($myPDO->errorInfo());
@@ -62,7 +68,7 @@
             
             $mensaje = 'Hubo un problema con el envio, por favor intentelo más tarde.';
             $estado = 'error';
-            $data[] = ['mensaje' => $mensaje, 'estado' => $estado, 'info' => $e->getMessage()];
+            $data = ['mensaje' => $mensaje, 'estado' => $estado, 'info' => $e->getMessage()];
             echo json_encode($data);  // no conexion a la bd
 		}
     } else {
