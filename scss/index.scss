@@ -268,10 +268,10 @@ img{
     font-family: Gothan;
     font-weight: bold;
     color: $hd-purple;
-    text-align: center;
-    
+    text-align: center; 
   }
   h5{
+    color: $hd-gray;
     font-family: Gothan Book;
     text-align: center;  
     strong{
@@ -770,6 +770,10 @@ img{
 
 /* Modal */
 
+.modal-dialog{
+  
+}
+
 .modal.fade .modal-dialog.modal-dialog-zoom {
   -webkit-transform: translate(0,0)scale(.5);
   transform: translate(0,0)scale(.5);
@@ -782,7 +786,7 @@ img{
 .modal-content  {
   /*max-height: calc(100vh - 200px);
   overflow-y: auto;*/
-  
+  border: 0px;
   -webkit-border-radius: 0px !important;
   -moz-border-radius: 0px !important;
   border-radius: 0px !important; 
@@ -831,7 +835,6 @@ img{
     padding-top: 15px;
   }
 }
-/* TODO: Quitar el visibility hidden cuando se llegue a un acuerdo con la maqueta*/
 .mensaje {
   visibility: hidden;
 }
@@ -861,5 +864,13 @@ img{
     padding-left: 5px;
     padding-right: 5px;
     padding-bottom: 5px;
+  }
+}
+
+.after-post{
+  // TODO: Ajustar el tamaño del icono de exito
+  img{
+    width: 10%;
+    height: auto;
   }
 }

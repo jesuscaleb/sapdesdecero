@@ -8886,6 +8886,7 @@ img {
   color: #33064a;
   text-align: center; }
 .title h5 {
+  color: #666666;
   font-family: Gothan Book;
   text-align: center; }
   .title h5 strong {
@@ -9275,6 +9276,7 @@ img {
 .modal-content {
   /*max-height: calc(100vh - 200px);
   overflow-y: auto;*/
+  border: 0px;
   -webkit-border-radius: 0px !important;
   -moz-border-radius: 0px !important;
   border-radius: 0px !important; }
@@ -9313,7 +9315,6 @@ img {
   .sap-item p {
     padding-top: 15px; }
 
-/* TODO: Quitar el visibility hidden cuando se llegue a un acuerdo con la maqueta*/
 .mensaje {
   visibility: hidden; }
 
@@ -9339,5 +9340,9 @@ img {
     padding-left: 5px;
     padding-right: 5px;
     padding-bottom: 5px; }
+
+.after-post img {
+  width: 10%;
+  height: auto; }
 
 /*# sourceMappingURL=index.css.map */
