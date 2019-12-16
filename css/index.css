@@ -8742,14 +8742,6 @@ body {
 .navbar-custom {
   background-color: #FFFFFF; }
 
-/* Footer */
-#sticky-footer {
-  flex-shrink: 0; }
-
-.enlaces p a {
-  text-decoration: none;
-  color: #FFFFFF; }
-
 /* Custom image size */
 img {
   width: 100%;
@@ -9043,7 +9035,7 @@ img {
 
 /* Backup Section*/
 .green-underline {
-  border-bottom: 3px #006633 solid;
+  border-bottom: 2px #006633 solid;
   padding-right: 30px;
   padding-left: 30px; }
 
@@ -9058,6 +9050,14 @@ img {
     height: auto; }
 
 /* Footer */
+/* Footer */
+#sticky-footer {
+  flex-shrink: 0; }
+
+.footer-media p a {
+  text-decoration: none;
+  color: #FFFFFF; }
+
 .bg-footer1 {
   background-color: #33064a; }
 
@@ -9070,8 +9070,7 @@ img {
   padding-bottom: 20px;
   color: #FFFFFF;
   font-family: Gothan Book;
-  font-weight: bold;
-  font-size: 13px;
+  font-size: 14.5px;
   text-align: justify; }
   .footer-row h5 {
     font-family: Gothan;
@@ -9087,7 +9086,8 @@ img {
       text-decoration: none;
       color: #FFFFFF;
       font-size: 14px;
-      font-family: Gothan Book; }
+      font-family: Gothan Book;
+      font-weight: bold; }
 
 .circle-border {
   width: 100px;
@@ -9114,7 +9114,7 @@ img {
   font-family: Gothan;
   font-weight: bold;
   color: #666666;
-  border-bottom: 3px #006633 solid; }
+  border-bottom: 2px #006633 solid; }
 
 .obj-list {
   /* Custom HTML bullets */ }
@@ -9161,7 +9161,7 @@ img {
 .tem-title h1 {
   font-family: Gothan;
   font-weight: bold;
-  border-bottom: 3px #006633 solid; }
+  border-bottom: 2px #006633 solid; }
 
 .tem-sub {
   padding-top: 20px; }
@@ -9305,9 +9305,9 @@ img {
     color: #666666; }
 
 .sap-item {
-  padding-top: 10px; }
+  padding-top: 30px; }
   .sap-item img {
-    width: 70px;
+    width: 90px;
     height: auto;
     /*box-shadow: 7px 7px 7px 7px;*/ }
   .sap-item p {

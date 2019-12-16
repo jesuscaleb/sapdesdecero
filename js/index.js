@@ -120,6 +120,10 @@ $(document).ready(function(){
                     // Eliminan los formularios de la página 
                     $('#loading').remove();
                     $('#reg-form').remove();
+                    $('.form-title').remove();
+                    $('.frm-title').remove();
+                    $('.after-post').removeClass('col-md-8');
+                    $('.after-post').addClass('col-md-12');
                     $('#reg-form2').remove();
                     $('.btn-enviar').attr('disabled', 'false');
                     
@@ -213,6 +217,10 @@ $(document).ready(function(){
                 $('#loading').remove();
                 $('#reg-form').remove();
                 $('#reg-form2').remove();
+                $('.form-title').remove();
+                $('.frm-title').remove();
+                $('.after-post').removeClass('col-md-8');
+                $('.after-post').addClass('col-md-12');
                 $('.btn-enviar').attr('disabled', 'false');
                 
                 if(data.estado == 'exito'){
