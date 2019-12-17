@@ -31,7 +31,7 @@
         
         
         try {
-            $myPDO = new PDO('pgsql:host= {host};dbname={dbname}', '{user}', '{password}');
+			$myPDO = new PDO('pgsql:host= {host};dbname={dbname}', '{user}', '{password}');
 
 			if($myPDO) {
 				$query = "INSERT INTO crm.interesado(id_origen, creado,
