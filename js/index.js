@@ -79,7 +79,7 @@ $(document).ready(function(){
                 required:"Ingrese sus nombres completos"
             },
             txtemail:{
-                required:"Ingrese su correo electronico",
+                required:"Ingrese su Correo electrónico",
                 email:"Correo invalido"
             },
             txtcel:{
@@ -107,14 +107,20 @@ $(document).ready(function(){
             $('.btn-enviar').attr('disabled', 'true');
             $('.btn-enviar')
             .append('<span id="loading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>');
-            
+            var nombre = $('#reg-form').find('input[name="txtnom"]').val();
+            var email = $('#reg-form').find('input[name="txtemail"]').val();
+            var numero = $('#reg-form').find('input[name="txtcel"]').val();
+            var curso = $('#reg-form').find('select[name="selcur"]').val();
             $.ajax({
-                url: './data/submit.php',
+                // url: './data/submit.php',
+                url: 'https://cors-anywhere.herokuapp.com/https://docs.google.com/forms/d/e/1FAIpQLSfWbdkHlukkd1dKkFn2tHcQ0vscIWZQlQuzfY4ZBtve5qv2-w/formResponse',
                 type: 'POST',
                 
-                data: $(form).serialize(),
+                // data: $(form).serialize(),
+                data: {"entry.869624654": nombre, "entry.753489023": email, "entry.376184160": numero, "entry.115324886": curso},
+                
                 success: function(data) {
-                    var data = jQuery.parseJSON(data);
+                   
                     
                     console.log(data);
                     // Eliminan los formularios de la página 
@@ -127,19 +133,15 @@ $(document).ready(function(){
                     $('#reg-form2').remove();
                     $('.btn-enviar').attr('disabled', 'false');
                     
-                    if(data.estado == 'exito'){
-                        var src_icon = 'img/icons/exito.png';
-                        
-                        SaveToDisk("files/"+ data.curso +".pdf", "TEMARIO " + data.curso);
-                    }else{
-                        var src_icon = 'img/icons/error.png';
-                    }
+                    SaveToDisk("files/"+ curso +".pdf", "TEMARIO " + curso);
+                    var src_icon = 'img/icons/exito.png';
+                    var mensaje = 'Se envió el mensaje con éxito.';
                     $('.response').append("<img class='mx-auto' src='"+ src_icon +"'>");
-                    $('.response').append("<h4 class='mx-auto text-center'>"+data.mensaje+"</h4>");
+                    $('.response').append("<h4 class='mx-auto text-center'>"+mensaje+"</h4>");
                     $('.response')
                     .append("<p class='mx-auto text-center'>Se descargará el temario del curso seleccionado.</p>");
                     $('.response')
-                    .append("<p class='mx-auto text-center'>Si no se descarga el archivo, haga click <a target='_blank' href='files/"+data.curso+".pdf'>Aquí</a>.</p>");
+                    .append("<p class='mx-auto text-center'>Si no se descarga el archivo, haga click <a target='_blank' href='files/"+curso+".pdf'>Aquí</a>.</p>");
                     // Clear the form
 					validator.resetForm();
                 },
@@ -177,7 +179,7 @@ $(document).ready(function(){
             required:"Ingrese sus nombres completos"
         },
         txtemail2:{
-            required:"Ingrese su correo electronico",
+            required:"Ingrese su Correo electrónico",
             email:"Correo invalido"
         },
         txtcel2:{
@@ -201,46 +203,50 @@ $(document).ready(function(){
     }
     ,
     submitHandler: function(form) {
+        // Mientras carga el envio se bloquea el boton y luego realiza la animacion de carga.
         $('.btn-enviar').attr('disabled', 'true');
         $('.btn-enviar')
         .append('<span id="loading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>');
+        var nombre = $('#reg-form2').find('input[name="txtnom2"]').val();
+        var email = $('#reg-form2').find('input[name="txtemail2"]').val();
+        var numero = $('#reg-form2').find('input[name="txtcel2"]').val();
+        var curso = $('#reg-form2').find('select[name="selcur2"]').val();
         $.ajax({
-            url: './data/submit.php',
+            // url: './data/submit.php',
+            url: 'https://cors-anywhere.herokuapp.com/https://docs.google.com/forms/d/e/1FAIpQLSfWbdkHlukkd1dKkFn2tHcQ0vscIWZQlQuzfY4ZBtve5qv2-w/formResponse',
             type: 'POST',
+            // data: $(form).serialize(),
+            data: {"entry.869624654": nombre, "entry.753489023": email, "entry.376184160": numero, "entry.115324886": curso},
             
-            data: $(form).serialize(),
             success: function(data) {
-                var data = jQuery.parseJSON(data);
+                
                 
                 console.log(data);
                 // Eliminan los formularios de la página 
                 $('#loading').remove();
                 $('#reg-form').remove();
-                $('#reg-form2').remove();
                 $('.form-title').remove();
                 $('.frm-title').remove();
                 $('.after-post').removeClass('col-md-8');
                 $('.after-post').addClass('col-md-12');
+                $('#reg-form2').remove();
                 $('.btn-enviar').attr('disabled', 'false');
                 
-                if(data.estado == 'exito'){
-                    var src_icon = 'img/icons/exito.png';
-                    
-                    SaveToDisk("files/"+ data.curso +".pdf", "TEMARIO " + data.curso);
-                }else{
-                    var src_icon = 'img/icons/error.png';
-                }
+                SaveToDisk("files/"+ curso +".pdf", "TEMARIO " + curso);
+                var src_icon = 'img/icons/exito.png';
+                var mensaje = 'Se envió el mensaje con éxito.';
                 $('.response').append("<img class='mx-auto' src='"+ src_icon +"'>");
-                $('.response').append("<h4 class='mx-auto text-center'>"+data.mensaje+"</h4>");
+                $('.response').append("<h4 class='mx-auto text-center'>"+mensaje+"</h4>");
                 $('.response')
                 .append("<p class='mx-auto text-center'>Se descargará el temario del curso seleccionado.</p>");
                 $('.response')
-                .append("<p class='mx-auto text-center'>Si no se descarga el archivo, haga click <a target='_blank' href='files/"+data.curso+".pdf'>Aquí</a>.</p>");
+                .append("<p class='mx-auto text-center'>Si no se descarga el archivo, haga click <a target='_blank' href='files/"+curso+".pdf'>Aquí</a>.</p>");
                 // Clear the form
                 validator.resetForm();
             },
             error: function (e) {
                 console.log(e);
+                
             }            
         });
         return false;
